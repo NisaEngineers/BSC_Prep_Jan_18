@@ -1,0 +1,103 @@
+ Study Plan (18–25 January)
+18 January (12 lectures)
+Bangla Grammar Lecture-1: শব্দ ১
+Bangla Grammar Lecture-2: ধ্বনি ও বর্ণ
+Bangla Grammar Lecture-3: ণত্ব বিধি ষত্ব বিধি ও ধ্বনির পরিবর্তন
+Bangla Literature Lecture-1: বাংলা সাহিত্যের প্রাচীন যুগ
+English Grammar Lecture-1: Anatomy of English Sentence
+English Grammar Lecture-2: Identification of Phrase & Clause
+Mathematics Lecture-1: বীজগাণিতিক রাশি
+Mathematics Lecture-2: সূচক
+Mathematics Lecture-3: লগারিদম
+General Science Lecture-1: পদার্থের অবস্থা ও গঠন
+Computer & ICT Lecture-1: Computer Architecture
+Ethics Lecture-1: নৈতিকতা, সুশাসন ও মূল্যবোধ-১
+19 January (11 lectures)
+Bangla Grammar Lecture-4: উপসর্গ ও সমার্থক শব্দ
+Bangla Grammar Lecture-5: সন্ধি
+Bangla Literature Lecture-2: বাংলা সাহিত্যের মধ্যযুগ ১
+English Grammar Lecture-3: Noun & Pronoun
+English Grammar Lecture-4: Adjective & Adverb
+Mathematics Lecture-4: সরল সহসমীকরণ ও বহুপদী এবং দ্বিঘাত সমীকরণ
+Mathematics Lecture-5: অসমতা
+Mathematics Lecture-6: সমান্তর ও গুণোত্তর ধারা
+General Science Lecture-2: পর্যায় সারণি ও জারণ-বিজারণ
+Computer & ICT Lecture-2: Memory Software OS
+Ethics Lecture-2: নৈতিকতা, সুশাসন ও মূল্যবোধ-২
+20 January (13 lectures)
+Bangla Grammar Lecture-6: সমাস
+Bangla Grammar Lecture-7: প্রকৃতি প্রত্যয়
+Bangla Literature Lecture-3: বাংলা সাহিত্যের মধ্যযুগ ২
+English Grammar Lecture-5: Tense
+English Grammar Lecture-6: Voice
+Mathematics Lecture-7: সেট ও ফাংশন
+Mathematics Lecture-8: ত্রিকোণমিতি
+Mathematics Lecture-9: বিন্যাস ও সমাবেশ (Part-1)
+General Science Lecture-3: জারণ-বিজারণ, তড়িৎ কোষ, এসিড-ক্ষারক-লবণ
+Computer & ICT Lecture-3: Computer Network
+Computer & ICT Lecture-4: Logic Gate
+Ethics Lecture-3: নৈতিকতা, সুশাসন ও মূল্যবোধ-৩
+Geography Lecture-1: মানচিত্র, কাল্পনিক রেখা ও মহাকাশ
+21 January (12 lectures)
+Bangla Grammar Lecture-8: বাক্য প্রকরণ, পদ প্রকরণ
+Bangla Grammar Lecture-9: বাণান ও বাক্যগঠন, প্রয়োগ-অপ্রয়োগ
+Bangla Literature Lecture-4: বাংলা সাহিত্যে আধুনিক যুগ ১
+English Grammar Lecture-7: Verb & Right Form of Verb
+Mathematics Lecture-10: বিন্যাস ও সমাবেশ (Part-2)
+Mathematics Lecture-11: সম্ভাব্যতা
+Mathematics Lecture-12: ত্রিভুজ সংক্রান্ত উপপাদ্য
+General Science Lecture-4: ধাতু অধাতু ও জৈব রসায়ন
+Computer & ICT Lecture-5: Numbering System
+Computer & ICT Lecture-6: Internet
+Ethics Lecture-4: নৈতিকতা, সুশাসন ও মূল্যবোধ-৪ (Extra)
+Geography Lecture-2: বাংলাদেশের অবস্থান, সম্পদ
+22 January (11 lectures)
+Bangla Literature Lecture-5: বাংলা সাহিত্যে আধুনিক যুগ ২
+English Grammar Lecture-8: Conditional & Correction
+English Grammar Lecture-9: Conjunction & Sentence
+English Literature Lecture-1: Literary Terms
+English Literature Lecture-2: Old & Middle English Period & Renaissance-1
+Mathematics Lecture-13: পরিমিতি ১ ও ২
+Mathematics Lecture-14: পরিমিতি-৩
+General Science Lecture-5: ভৌত বিজ্ঞান, বলবিদ্যা, মহাকর্ষ, কাজ ক্ষমতা শক্তি
+Computer & ICT Lecture-7: Computer Programming
+Mental Ability Lecture-1: বার নির্ণয় ও ঘড়ি সমস্যা
+Geography Lecture-3: ভূ-অভ্যন্তরীণ গঠন ও উপাদান
+23 January (14 lectures)
+Bangla Literature Lecture-6: বাংলা সাহিত্যে আধুনিক যুগ ৩
+English Literature Lecture-3: Renaissance-2
+English Literature Lecture-4: Renaissance-3
+Mathematics Lecture-15: শতকরা-১
+Mathematics Lecture-16: শতকরা-২
+Mathematics Lecture-17: স্থানাংক জ্যামিতি
+Mathematics Lecture-18: লাভ-ক্ষতি
+General Science Lecture-6: তাপ ও শব্দ
+General Science Lecture-7: তড়িৎ ও আলো
+Computer & ICT Lecture-8: Database & Data Communication
+Mental Ability Lecture-2: অবস্থান নির্ণয় ও যান্ত্রিক দক্ষতা
+Geography Lecture-4: বায়ুমন্ডল ও বাংলাদেশের নদ নদী
+Geography Lecture-5: বারিমণ্ডল ও ভৌগোলিক অবস্থান
+Geography Lecture-6: আবহাওয়া ও জলবায়ু
+24 January (10 lectures)
+English Literature Lecture-5: Neoclassical Period
+English Literature Lecture-6: Romantic Period
+Mathematics Lecture-19: অনুপাত ও সমানুপাত
+Mathematics Lecture-20: মুনাফা
+Mathematics Lecture-21: লসাগু-গসাগু
+General Science Lecture-8: চুম্বক, ইলেকট্রনিক্স, আধুনিক পদার্থবিজ্ঞান
+General Science Lecture-9: খাদ্য ও পুষ্টি
+Computer & ICT Lecture-9: Malware, Cyber Security
+Mental Ability Lecture-3: ত্রিভুজ ও চতুর্ভুজ গণনা
+Geography Lecture-7: প্রাকৃতিক দুর্যোগ ও ব্যবস্থাপনা
+25 January (10 lectures)
+English Literature Lecture-7: Victorian Period
+English Literature Lecture-8: Modern Period
+English Literature Lecture-9: Post Modern Period
+Mathematics Lecture-22: বাস্তব সংখ্যা
+Mathematics Lecture-23: বৃত্ত ও ভেনচিত্র (Extra Class)
+General Science Lecture-10: জীববিজ্ঞান এর ক্রমবিকাশ ও কোষ
+General Science Lecture-11: কোষ বিভাজন, কলা, জিনতত্ত্ব
+General Science Lecture-12: অনুজীব বিজ্ঞান, উদ্ভিদ বিজ্ঞান ও প্রাণিবৈচিত্র্য
+General Science Lecture-13: মানবদেহ-১ ও ২
+Mental Ability Lecture-4: ভাষাগত যৌক্তিক বিচার
+
