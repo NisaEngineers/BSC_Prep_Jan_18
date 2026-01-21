@@ -1,0 +1,25 @@
+{
+  "2026-01-22": {
+    "Final High Prep + Song Listening": {
+      "completed": false,
+      "notes": "",
+      "start": "01:00",
+      "end": "00:25",
+      "logged_on": null
+    },
+    "Before Sleep Meal": {
+      "completed": false,
+      "notes": "",
+      "start": "02:15",
+      "end": "02:30",
+      "logged_on": null
+    },
+    "App git upload + Taking Final High": {
+      "completed": false,
+      "notes": "",
+      "start": "02:30",
+      "end": "03:00",
+      "logged_on": null
+    }
+  }
+}
