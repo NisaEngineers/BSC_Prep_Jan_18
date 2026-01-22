@@ -471,6 +471,96 @@
       "link": "",
       "completed_on": null,
       "assigned_day": "22 January"
+    },
+    "Bangla Grammar Lecture-1: শব্দ ১": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "Bangla Grammar Lecture-2: ধ্বনি ও বর্ণ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "Bangla Grammar Lecture-3: ণত্ব বিধি ষত্ব বিধি ও ধ্বনির পরিবর্তন": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "Bangla Literature Lecture-1: বাংলা সাহিত্যের প্রাচীন যুগ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "English Grammar Lecture-1: Anatomy of English Sentence": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "English Grammar Lecture-2: Identification of Phrase & Clause": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "Mathematics Lecture-1: বীজগাণিতিক রাশি": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "Mathematics Lecture-2: সূচক": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
+    },
+    "Mathematics Lecture-3: লগারিদম": {
+      "study": true,
+      "exam": false,
+      "notes": "Start from: https://youtu.be/45_NxOatQOA?t=2861",
+      "start": "22:30",
+      "end": "23:45",
+      "link": "https://youtu.be/45_NxOatQOA",
+      "completed_on": "2026-01-22 23:05",
+      "assigned_day": "22 January"
     }
   }
 }

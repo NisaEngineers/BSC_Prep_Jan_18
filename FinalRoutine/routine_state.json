@@ -2,14 +2,14 @@
   "2026-01-22": {
     "App git upload + Taking Final High": {
       "completed": true,
-      "notes": "",
+      "notes": "Gym D4\nThursday 22 January 2026 at 2:08 pm\n\nCycling (Indoor)\nSet 1: 5:00\n\n\nPull Up\nSet 1: +93.4 kg × 8 reps\n\n\nChin Up\nSet 1: +93.4 kg × 8 reps\n\n\nChest Dip\nSet 1: +93.4 kg × 10 reps\n\n\nDeadlift (Barbell)\nSet 1: 70 kg × 5 reps\nSet 2: 70 kg × 5 reps\nSet 3: 70 kg × 5 reps\nSet 4: 70 kg × 5 reps\n\n\nIncline Bench Press (Smith Machine)\nSet 1: 60 kg × 8 reps\nSet 2: 60 kg × 8 reps\nSet 3: 60 kg × 10 reps\n\n\nPec Deck (Machine)\nSet 1: 45 kg × 10 reps\nSet 2: 45 kg × 10 reps\nSet 3: 45 kg × 10 reps\n\n\nSeated Row (Cable)\nSet 1: 60 kg × 10 reps\nSet 2: 60 kg × 10 reps\nSet 3: 60 kg × 10 reps\n\n\nSeated Leg Curl (Machine)\nSet 1: 10 kg × 10 reps\nSet 2: 10 kg × 10 reps\nSet 3: 20 kg × 10 reps\n\n\nHammer Curl (Cable)\nSet 1: 10 kg × 10 reps\nSet 2: 15 kg × 10 reps\nSet 3: 15 kg × 10 reps\n\n\nFace Pull (Cable)\nSet 1: 30 kg × 10 reps\nSet 2: 35 kg × 10 reps\nSet 3: 40 kg × 10 reps\n\n\nHanging Knee Raise\nSet 1: 10 reps\n\n\nRunning (Treadmill)\nSet 1: 1.15 km, 10:15\n",
       "start": "02:30",
       "end": "03:00",
       "logged_on": "2026-01-22 20:19"
     },
     "Sleep": {
       "completed": true,
-      "notes": "",
+      "notes": "Next sleep Friday (23-01-26) 10–11 pm",
       "start": "03:00",
       "end": "12:30",
       "logged_on": "2026-01-22 20:19"
@@ -29,10 +29,26 @@
       "logged_on": "2026-01-22 20:19"
     },
     "Suruj Time": {
-      "completed": false,
-      "notes": "",
+      "completed": true,
+      "notes": "Suruj has arrived at 20:28, gone 2200",
       "start": "20:30",
-      "end": "21:15",
+      "end": "21:55",
+      "logged_on": "2026-01-22 21:53"
+    },
+    "Math Logarithm": {
+      "completed": true,
+      "notes": "",
+      "start": "22:30",
+      "end": "23:30",
+      "logged_on": "2026-01-22 23:28"
+    }
+  },
+  "2026-01-23": {
+    "Preparing Environment for education": {
+      "completed": false,
+      "notes": "Preparing Table for Rigorous Study ",
+      "start": "01:30",
+      "end": "01:45",
       "logged_on": null
     }
   }
