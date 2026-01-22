@@ -57,6 +57,13 @@
       "start": "02:00",
       "end": "02:25",
       "logged_on": "2026-01-23 02:26"
+    },
+    "Taking Night Nap": {
+      "completed": false,
+      "notes": "",
+      "start": "02:50",
+      "end": "05:50",
+      "logged_on": null
     }
   }
 }
