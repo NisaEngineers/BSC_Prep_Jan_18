@@ -20,6 +20,20 @@
       "start": "02:30",
       "end": "03:00",
       "logged_on": null
+    },
+    "Sleep": {
+      "completed": false,
+      "notes": "",
+      "start": "03:00",
+      "end": "12:30",
+      "logged_on": null
+    },
+    "GYM D4": {
+      "completed": false,
+      "notes": "",
+      "start": "13:10",
+      "end": "16:10",
+      "logged_on": null
     }
   }
 }
