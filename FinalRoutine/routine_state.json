@@ -51,12 +51,12 @@
       "end": "01:55",
       "logged_on": "2026-01-23 01:56"
     },
-    "Final High": {
-      "completed": false,
-      "notes": "Not at all at least until 160+ out of 200 ",
+    "Final High + Log Math Finish": {
+      "completed": true,
+      "notes": "Log Math Finished but need practice",
       "start": "02:00",
-      "end": "02:30",
-      "logged_on": null
+      "end": "02:25",
+      "logged_on": "2026-01-23 02:26"
     }
   }
 }
