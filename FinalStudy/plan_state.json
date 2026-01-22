@@ -267,6 +267,10 @@
     "add": {
       "19 January": [
         "GK Recent Lecture: 01"
+      ],
+      "22 January": [
+        "Good Governance Previous Q",
+        "Good Governance Previous Q"
       ]
     },
     "move": {
@@ -455,6 +459,18 @@
       "link": "",
       "completed_on": null,
       "assigned_day": "21 January"
+    }
+  },
+  "22 January": {
+    "Good Governance Previous Q": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "22 January"
     }
   }
 }

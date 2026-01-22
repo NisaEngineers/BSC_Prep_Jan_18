@@ -1,38 +1,38 @@
 {
   "2026-01-22": {
-    "Final High Prep + Song Listening": {
-      "completed": false,
-      "notes": "",
-      "start": "01:00",
-      "end": "00:25",
-      "logged_on": null
-    },
-    "Before Sleep Meal": {
-      "completed": false,
-      "notes": "",
-      "start": "02:15",
-      "end": "02:30",
-      "logged_on": null
-    },
     "App git upload + Taking Final High": {
-      "completed": false,
+      "completed": true,
       "notes": "",
       "start": "02:30",
       "end": "03:00",
-      "logged_on": null
+      "logged_on": "2026-01-22 20:19"
     },
     "Sleep": {
-      "completed": false,
+      "completed": true,
       "notes": "",
       "start": "03:00",
       "end": "12:30",
-      "logged_on": null
+      "logged_on": "2026-01-22 20:19"
     },
     "GYM D4": {
-      "completed": false,
+      "completed": true,
       "notes": "",
       "start": "13:10",
       "end": "16:10",
+      "logged_on": "2026-01-22 20:19"
+    },
+    "Launch + Study Prep": {
+      "completed": true,
+      "notes": "",
+      "start": "16:45",
+      "end": "17:30",
+      "logged_on": "2026-01-22 20:19"
+    },
+    "Suruj Time": {
+      "completed": false,
+      "notes": "",
+      "start": "20:30",
+      "end": "21:15",
       "logged_on": null
     }
   }
