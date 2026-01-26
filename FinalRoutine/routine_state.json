@@ -59,10 +59,111 @@
       "logged_on": "2026-01-23 02:26"
     },
     "Taking Night Nap": {
+      "completed": true,
+      "notes": "Complete Sleep",
+      "start": "02:50",
+      "end": "12:05",
+      "logged_on": "2026-01-23 14:16"
+    },
+    "Kadalu Work": {
+      "completed": true,
+      "notes": "Updated limit and Service FAQs",
+      "start": "15:00",
+      "end": "17:30",
+      "logged_on": "2026-01-23 17:12"
+    },
+    "Study Session 1": {
+      "completed": false,
+      "notes": "English Grammar Lecture-10: Solve Class-1",
+      "start": "20:50",
+      "end": "21:30",
+      "logged_on": null
+    },
+    "Study Session 2": {
       "completed": false,
       "notes": "",
-      "start": "02:50",
-      "end": "05:50",
+      "start": "19:15",
+      "end": "21:45",
+      "logged_on": null
+    },
+    "Study Session 3": {
+      "completed": false,
+      "notes": "",
+      "start": "22:00",
+      "end": "23:55",
+      "logged_on": null
+    }
+  },
+  "2026-01-24": {
+    "Kadalu Work": {
+      "completed": true,
+      "notes": "Faqs and Limits Upgraded\nNext day email auth, dashboard, admin, database migration and making plans test",
+      "start": "00:00",
+      "end": "02:00",
+      "logged_on": "2026-01-24 01:55"
+    },
+    "Genuinely last high": {
+      "completed": true,
+      "notes": "Done, preparing to sleep\nNot Done \nNo Gym This Week, if possible Walk/Run\nElse \n25, 27 and 29 Jan: 3x8 Pull Up, 3x20 Squat Jump, 3 x 20 Lunge (each leg), 3x15 Push Up",
+      "start": "02:00",
+      "end": "02:30",
+      "logged_on": "2026-01-24 02:29"
+    },
+    "Kadalu Work Phase 2": {
+      "completed": true,
+      "notes": "Dash Board and Pricing Upgrade\nNo work till 30 January and so on",
+      "start": "02:30",
+      "end": "04:45",
+      "logged_on": "2026-01-24 04:33"
+    },
+    "Day 1/3 Days Study": {
+      "completed": true,
+      "notes": "1. English Grammar Lecture-10: Solve Class-1\n2 English Grammar Lecture-1: Anatomy of English Sentence\n3. Bank AME Q solution",
+      "start": "20:15",
+      "end": "23:55",
+      "logged_on": "2026-01-25 19:33"
+    }
+  },
+  "2026-01-25": {
+    "Study Session 1": {
+      "completed": true,
+      "notes": "https://youtu.be/ui9gBHk4-I8",
+      "start": "02:30",
+      "end": "06:00",
+      "logged_on": "2026-01-25 19:32"
+    },
+    "Study Session 2": {
+      "completed": true,
+      "notes": "https://youtu.be/Zv7RV1WH6rE?t=4111",
+      "start": "20:55",
+      "end": "22:50",
+      "logged_on": "2026-01-25 22:48"
+    },
+    "Lecture-1: নৈতিকতা, সুশাসন ও মূল্যবোধ- ১": {
+      "completed": true,
+      "notes": "https://youtu.be/8tAkAObmdYo",
+      "start": "22:50",
+      "end": "23:40",
+      "logged_on": "2026-01-25 23:39"
+    }
+  },
+  "2026-01-26": {
+    "Mild Rest": {
+      "completed": false,
+      "notes": "Going to bed, try rest an hour and listen afnan\n",
+      "logged_on": null,
+      "intervals": [
+        {
+          "start": "01:30",
+          "end": "02:30"
+        }
+      ]
+    },
+    "Marathon Math": {
+      "completed": false,
+      "notes": "",
+      "start": "05:30",
+      "end": "12:00",
       "logged_on": null
     }
   }

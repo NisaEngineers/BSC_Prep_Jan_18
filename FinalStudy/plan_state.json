@@ -8,7 +8,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-2: ধ্বনি ও বর্ণ": {
       "study": true,
@@ -18,7 +24,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-3: ণত্ব বিধি ষত্ব বিধি ও ধ্বনির পরিবর্তন": {
       "study": false,
@@ -28,7 +40,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Literature Lecture-1: বাংলা সাহিত্যের প্রাচীন যুগ": {
       "study": false,
@@ -38,7 +56,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-1: Anatomy of English Sentence": {
       "study": false,
@@ -48,7 +72,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-2: Identification of Phrase & Clause": {
       "study": false,
@@ -58,7 +88,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-1: বীজগাণিতিক রাশি": {
       "study": true,
@@ -68,7 +104,13 @@
       "end": "00:00",
       "link": "https://youtu.be/TGN3aQchrAQ",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "17:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-2: সূচক": {
       "study": false,
@@ -78,7 +120,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-3: লগারিদম": {
       "study": false,
@@ -88,7 +136,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "General Science Lecture-1: পদার্থের অবস্থা ও গঠন": {
       "study": false,
@@ -98,7 +152,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Computer & ICT Lecture-1: Computer Architecture": {
       "study": false,
@@ -108,7 +168,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Ethics Lecture-1: নৈতিকতা, সুশাসন ও মূল্যবোধ-১": {
       "study": false,
@@ -118,7 +184,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "18 January"
+      "assigned_day": "18 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     }
   },
   "19 January": {
@@ -130,7 +202,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-4: উপসর্গ ও সমার্থক শব্দ": {
       "study": false,
@@ -140,7 +218,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-5: সন্ধি": {
       "study": false,
@@ -150,7 +234,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Literature Lecture-2: বাংলা সাহিত্যের মধ্যযুগ ১": {
       "study": false,
@@ -160,7 +250,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-3: Noun & Pronoun": {
       "study": false,
@@ -170,7 +266,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-4: Adjective & Adverb": {
       "study": false,
@@ -180,7 +282,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-4: সরল সহসমীকরণ ও বহুপদী এবং দ্বিঘাত সমীকরণ": {
       "study": false,
@@ -190,7 +298,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-5: অসমতা": {
       "study": false,
@@ -200,7 +314,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-6: সমান্তর ও গুণোত্তর ধারা": {
       "study": false,
@@ -210,7 +330,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "General Science Lecture-2: পর্যায় সারণি ও জারণ-বিজারণ": {
       "study": false,
@@ -220,7 +346,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Computer & ICT Lecture-2: Memory Software OS": {
       "study": false,
@@ -230,7 +362,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Ethics Lecture-2: নৈতিকতা, সুশাসন ও মূল্যবোধ-২": {
       "study": false,
@@ -240,7 +378,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "General Knowledge Lecture - recent: Highlights": {
       "study": false,
@@ -250,7 +394,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "GK Recent Lecture: 01": {
       "study": false,
@@ -260,7 +410,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "19 January"
+      "assigned_day": "19 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     }
   },
   "overrides": {
@@ -271,10 +427,18 @@
       "22 January": [
         "Good Governance Previous Q",
         "Good Governance Previous Q"
+      ],
+      "23 January": [
+        "English Grammar Lecture-10: Solve Class-1"
+      ],
+      "25 January": [
+        "English Grammar Lecture-11: Solve Class-2"
       ]
     },
     "move": {
-      "Bangla Literature Lecture-4: বাংলা সাহিত্যে আধুনিক যুগ ১": "20 January"
+      "Bangla Literature Lecture-4: বাংলা সাহিত্যে আধুনিক যুগ ১": "20 January",
+      "English Grammar Lecture-1: Anatomy of English Sentence": "24 January",
+      "English Grammar Lecture-10: Solve Class-1": "24 January"
     }
   },
   "20 January": {
@@ -286,7 +450,13 @@
       "end": "03:00",
       "link": "https://youtu.be/DZjB6FnheUk",
       "completed_on": "2026-01-20 02:54",
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "02:15",
+          "end": "03:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-7: প্রকৃতি প্রত্যয়": {
       "study": false,
@@ -296,7 +466,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Literature Lecture-3: বাংলা সাহিত্যের মধ্যযুগ ২": {
       "study": false,
@@ -306,7 +482,13 @@
       "end": "19:00",
       "link": "https://youtu.be/k1clE_ecyj0",
       "completed_on": "2026-01-20 18:27",
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "18:30",
+          "end": "19:00"
+        }
+      ]
     },
     "English Grammar Lecture-5: Tense": {
       "study": false,
@@ -316,7 +498,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-6: Voice": {
       "study": false,
@@ -326,7 +514,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-7: সেট ও ফাংশন": {
       "study": false,
@@ -336,7 +530,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-8: ত্রিকোণমিতি": {
       "study": false,
@@ -346,7 +546,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-9: বিন্যাস ও সমাবেশ (Part-1)": {
       "study": false,
@@ -356,7 +562,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "General Science Lecture-3: জারণ-বিজারণ, তড়িৎ কোষ, এসিড-ক্ষারক-লবণ": {
       "study": false,
@@ -366,7 +578,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Computer & ICT Lecture-3: Computer Network": {
       "study": false,
@@ -376,7 +594,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Computer & ICT Lecture-4: Logic Gate": {
       "study": false,
@@ -386,7 +610,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Ethics Lecture-3: নৈতিকতা, সুশাসন ও মূল্যবোধ-৩": {
       "study": false,
@@ -396,7 +626,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Geography Lecture-1: মানচিত্র, কাল্পনিক রেখা ও মহাকাশ": {
       "study": false,
@@ -406,7 +642,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Literature Lecture-4: বাংলা সাহিত্যে আধুনিক যুগ ১": {
       "study": true,
@@ -416,7 +658,13 @@
       "end": "19:00",
       "link": "https://youtu.be/GJvSxrA3JQY",
       "completed_on": "2026-01-20 18:30",
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "18:30",
+          "end": "19:00"
+        }
+      ]
     }
   },
   "21 January": {
@@ -428,7 +676,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "21 January"
+      "assigned_day": "21 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-9: বাণান ও বাক্যগঠন, প্রয়োগ-অপ্রয়োগ": {
       "study": false,
@@ -438,7 +692,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "21 January"
+      "assigned_day": "21 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Literature Lecture-4: বাংলা সাহিত্যে আধুনিক যুগ ১": {
       "study": false,
@@ -448,7 +708,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "20 January"
+      "assigned_day": "20 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-7: Verb & Right Form of Verb": {
       "study": false,
@@ -458,7 +724,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "21 January"
+      "assigned_day": "21 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     }
   },
   "22 January": {
@@ -470,7 +742,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-1: শব্দ ১": {
       "study": false,
@@ -480,7 +758,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-2: ধ্বনি ও বর্ণ": {
       "study": false,
@@ -490,7 +774,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Grammar Lecture-3: ণত্ব বিধি ষত্ব বিধি ও ধ্বনির পরিবর্তন": {
       "study": false,
@@ -500,7 +790,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Bangla Literature Lecture-1: বাংলা সাহিত্যের প্রাচীন যুগ": {
       "study": false,
@@ -510,7 +806,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-1: Anatomy of English Sentence": {
       "study": false,
@@ -520,7 +822,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "English Grammar Lecture-2: Identification of Phrase & Clause": {
       "study": false,
@@ -530,7 +838,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-1: বীজগাণিতিক রাশি": {
       "study": false,
@@ -540,7 +854,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-2: সূচক": {
       "study": false,
@@ -550,7 +870,13 @@
       "end": "00:00",
       "link": "",
       "completed_on": null,
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
     },
     "Mathematics Lecture-3: লগারিদম": {
       "study": true,
@@ -560,7 +886,1155 @@
       "end": "23:45",
       "link": "https://youtu.be/45_NxOatQOA",
       "completed_on": "2026-01-22 23:05",
-      "assigned_day": "22 January"
+      "assigned_day": "22 January",
+      "intervals": [
+        {
+          "start": "22:30",
+          "end": "23:45"
+        }
+      ]
+    }
+  },
+  "23 January": {
+    "English Grammar Lecture-10: Solve Class-1": {
+      "study": true,
+      "exam": false,
+      "notes": "",
+      "start": "19:00",
+      "end": "20:00",
+      "link": "https://youtu.be/JgDnwtpnb_Q",
+      "completed_on": "2026-01-24 22:02",
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "19:00",
+          "end": "20:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-1: শব্দ ১": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-2: ধ্বনি ও বর্ণ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-3: ণত্ব বিধি ষত্ব বিধি ও ধ্বনির পরিবর্তন": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Literature Lecture-1: বাংলা সাহিত্যের প্রাচীন যুগ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-1: Anatomy of English Sentence": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "https://youtu.be/V8534zOeuP4",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-2: Identification of Phrase & Clause": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-1: বীজগাণিতিক রাশি": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-2: সূচক": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-3: লগারিদম": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "General Science Lecture-1: পদার্থের অবস্থা ও গঠন": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-1: Computer Architecture": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Ethics Lecture-1: নৈতিকতা, সুশাসন ও মূল্যবোধ-১": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-4: উপসর্গ ও সমার্থক শব্দ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-5: সন্ধি": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Literature Lecture-2: বাংলা সাহিত্যের মধ্যযুগ ১": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-3: Noun & Pronoun": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-4: Adjective & Adverb": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-4: সরল সহসমীকরণ ও বহুপদী এবং দ্বিঘাত সমীকরণ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-5: অসমতা": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "23 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    }
+  },
+  "24 January": {
+    "Mathematics Lecture-6: সমান্তর ও গুণোত্তর ধারা": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "General Science Lecture-2: পর্যায় সারণি ও জারণ-বিজারণ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-2: Memory Software OS": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Ethics Lecture-2: নৈতিকতা, সুশাসন ও মূল্যবোধ-২": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-6: সমাস": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-7: প্রকৃতি প্রত্যয়": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Literature Lecture-3: বাংলা সাহিত্যের মধ্যযুগ ২": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-5: Tense": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-6: Voice": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-7: সেট ও ফাংশন": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-8: ত্রিকোণমিতি": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-9: বিন্যাস ও সমাবেশ (Part-1)": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "General Science Lecture-3: জারণ-বিজারণ, তড়িৎ কোষ, এসিড-ক্ষারক-লবণ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-3: Computer Network": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-4: Logic Gate": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Ethics Lecture-3: নৈতিকতা, সুশাসন ও মূল্যবোধ-৩": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Geography Lecture-1: মানচিত্র, কাল্পনিক রেখা ও মহাকাশ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-8: বাক্য প্রকরণ, পদ প্রকরণ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-9: বাণান ও বাক্যগঠন, প্রয়োগ-অপ্রয়োগ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-1: Anatomy of English Sentence": {
+      "study": true,
+      "exam": false,
+      "notes": "",
+      "start": "21:00",
+      "end": "22:45",
+      "link": "https://youtu.be/V8534zOeuP4",
+      "completed_on": null,
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "21:00",
+          "end": "22:45"
+        }
+      ]
+    },
+    "English Grammar Lecture-10: Solve Class-1": {
+      "study": true,
+      "exam": false,
+      "notes": "",
+      "start": "18:00",
+      "end": "20:00",
+      "link": "https://youtu.be/JgDnwtpnb_Q",
+      "completed_on": "2026-01-24 22:54",
+      "assigned_day": "24 January",
+      "intervals": [
+        {
+          "start": "18:00",
+          "end": "20:00"
+        }
+      ]
+    }
+  },
+  "25 January": {
+    "English Grammar Lecture-11: Solve Class-2": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "https://youtu.be/ui9gBHk4-I8",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-7: Verb & Right Form of Verb": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-10: বিন্যাস ও সমাবেশ (Part-2)": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-11: সম্ভাব্যতা": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-12: ত্রিভুজ সংক্রান্ত উপপাদ্য": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "General Science Lecture-4: ধাতু অধাতু ও জৈব রসায়ন": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-5: Numbering System": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-6: Internet": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Ethics Lecture-4: নৈতিকতা, সুশাসন ও মূল্যবোধ-৪ (Extra)": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Geography Lecture-2: বাংলাদেশের অবস্থান, সম্পদ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Literature Lecture-5: বাংলা সাহিত্যে আধুনিক যুগ ২": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-8: Conditional & Correction": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-9: Conjunction & Sentence": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Literature Lecture-1: Literary Terms": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Literature Lecture-2: Old & Middle English Period & Renaissance-1": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-13: পরিমিতি ১ ও ২": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-14: পরিমিতি-৩": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "General Science Lecture-5: ভৌত বিজ্ঞান, বলবিদ্যা, মহাকর্ষ, কাজ ক্ষমতা শক্তি": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-7: Computer Programming": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-1: শব্দ ১": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-2: ধ্বনি ও বর্ণ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Grammar Lecture-3: ণত্ব বিধি ষত্ব বিধি ও ধ্বনির পরিবর্তন": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Bangla Literature Lecture-1: বাংলা সাহিত্যের প্রাচীন যুগ": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "English Grammar Lecture-2: Identification of Phrase & Clause": {
+      "study": true,
+      "exam": false,
+      "notes": "Start from: https://youtu.be/Zv7RV1WH6rE?t=3908",
+      "start": "03:00",
+      "end": "04:00",
+      "link": "https://youtu.be/Zv7RV1WH6rE",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "03:00",
+          "end": "04:00"
+        },
+        {
+          "start": "20:45",
+          "end": "22:45"
+        }
+      ]
+    },
+    "Mathematics Lecture-1: বীজগাণিতিক রাশি": {
+      "study": true,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-2: সূচক": {
+      "study": true,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "Mathematics Lecture-3: লগারিদম": {
+      "study": true,
+      "exam": false,
+      "notes": "",
+      "start": "00:00",
+      "end": "00:00",
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ]
+    },
+    "General Science Lecture-1: পদার্থের অবস্থা ও গঠন": {
+      "study": false,
+      "exam": false,
+      "notes": "https://youtu.be/5XDMgWqUXfc?t=1694",
+      "start": "04:30",
+      "end": "05:00",
+      "link": "https://youtu.be/5XDMgWqUXfc",
+      "completed_on": null,
+      "assigned_day": "25 January",
+      "intervals": [
+        {
+          "start": "04:30",
+          "end": "05:00"
+        }
+      ]
+    },
+    "Computer & ICT Lecture-1: Computer Architecture": {
+      "study": false,
+      "exam": false,
+      "notes": "",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "00:00"
+        }
+      ],
+      "link": "",
+      "completed_on": null,
+      "assigned_day": "25 January"
+    },
+    "Ethics Lecture-1: নৈতিকতা, সুশাসন ও মূল্যবোধ-১": {
+      "study": true,
+      "exam": true,
+      "notes": "Continuing from https://youtu.be/8tAkAObmdYo?t=2257",
+      "intervals": [
+        {
+          "start": "22:45",
+          "end": "23:15"
+        }
+      ],
+      "link": "https://youtu.be/8tAkAObmdYo",
+      "completed_on": "2026-01-25 23:39",
+      "assigned_day": "25 January"
     }
   }
 }
