@@ -79,28 +79,74 @@ habits = data.setdefault("habits", {})
 st.set_page_config(page_title="Routine & Habit Tracker", layout="wide", initial_sidebar_state="expanded")
 st.title("🗓️ Professional Routine & Habit Tracker")
 
+# Custom CSS for better UI
+st.markdown("""
+    <style>
+    .stApp {
+        background-color: #f0f4f8;
+    }
+    .stExpander {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+    }
+    .stButton > button {
+        border-radius: 5px;
+    }
+    .stMetric {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Tabs
 daily_tab, habits_tab, weekly_tab, analytics_tab = st.tabs(["Daily Routines", "Habits", "Weekly Summary", "Analytics"])
 
 with daily_tab:
     # Sidebar: choose date
-    st.sidebar.header("Select Date")
+    st.sidebar.header("📅 Select Date")
     selected_date = st.sidebar.date_input("Routine Date", value=date.today())
     day_str = selected_date.strftime("%Y-%m-%d")
     day_routine = routines.setdefault(day_str, {})
+
+    # Current time awareness
+    now = datetime.now()
+    current_time = now.time()
+    current_min = current_time.hour * 60 + current_time.minute
+    is_today = selected_date == date.today()
 
     # ── Add Activity ────────────────────────────────────────────
     st.sidebar.header("➕ Add Activity")
     activity_name = st.sidebar.text_input("Activity name (e.g. Work, Sleep, Gym)")
     category = st.sidebar.selectbox("Category", list(CATEGORIES.keys()), index=0)
-    default_start = dtime(9, 0)
-    default_end = dtime(10, 0)
+
+    # Smart default times: max of current time (if today) or last end time
+    existing_ends = [parse_minutes(interval['end']) for info in day_routine.values() for interval in info.get("intervals", [])]
+    max_end_min = max(existing_ends) if existing_ends else 540  # 9:00 AM in minutes
+    max_end_time = dtime(max_end_min // 60, max_end_min % 60)
+
+    default_start = max_end_time
+    if is_today:
+        default_start = max(current_time, max_end_time)
+
+    default_end = (datetime.combine(selected_date, default_start) + timedelta(hours=1)).time()
+
     start_t = st.sidebar.time_input("Start time", value=default_start)
     end_t = st.sidebar.time_input("End time", value=default_end)
     start_time = time_to_str(start_t)
     end_time = time_to_str(end_t)
 
-    if st.sidebar.button("Add Activity", disabled=not activity_name.strip()):
+    # Validation for past times on today
+    add_disabled = not activity_name.strip()
+    if is_today and parse_minutes(start_time) < current_min:
+        st.sidebar.warning("⚠️ Adding task in the past. It may be marked as missed if not completed.")
+    
+    if st.sidebar.button("Add Activity", disabled=add_disabled):
         act = activity_name.strip()
         day_routine[act] = {
             "completed": False,
@@ -146,11 +192,17 @@ with daily_tab:
     timeline_data = []
 
     # Check if any timer is running to enable auto-refresh
-    any_running = any(info.get("timer", {}).get("state") == "running" for info in day_routine.values())
+    any_running = any(info.get("timer", {}).get("state") == "running" for info in day_routine.values() if info)
     if any_running:
         st_autorefresh(interval=1000, key="timer_refresh")
 
-    for act, info in day_routine.items():
+    # Sort activities by earliest start time
+    if day_routine:
+        activities = sorted(day_routine.items(), key=lambda item: min(parse_minutes(intv['start']) for intv in item[1].get('intervals', [{'start': '00:00 AM'}])))
+    else:
+        activities = []
+
+    for act, info in activities:
         total_acts += 1
 
         # Initialize timer if missing
@@ -162,10 +214,37 @@ with daily_tab:
             }
 
         with st.expander(f"📌 {act} ({info['category']})", expanded=True):
-            # ✅ Checkbox with auto-save
+            # Status based on time
+            min_start_min = min(parse_minutes(intv['start']) for intv in info['intervals'])
+            max_end_min = max(parse_minutes(intv['end']) for intv in info['intervals'])
+
+            status_text = ""
+            status_color = "gray"
+            if selected_date < date.today() or (is_today and max_end_min < current_min):
+                if not info["completed"]:
+                    status_text = "Missed ⏰"
+                    status_color = "red"
+                    info["completed"] = False  # Ensure not completed
+                else:
+                    status_text = "Completed ✅"
+                    status_color = "green"
+            elif is_today and min_start_min > current_min:
+                status_text = "Upcoming ⏳"
+                status_color = "blue"
+            elif is_today:
+                status_text = "Ongoing 🕒"
+                status_color = "orange"
+            else:
+                status_text = "Planned 📅"
+                status_color = "gray"
+
+            st.markdown(f"**Status:** <span style='color:{status_color};'>{status_text}</span>", unsafe_allow_html=True)
+
+            # ✅ Checkbox with auto-save (disable if missed and past)
+            disable_checkbox = "Missed" in status_text
             comp_key = f"comp_{day_str}_{act}"
-            new_completed = st.checkbox("Done", value=info["completed"], key=comp_key)
-            if new_completed != info["completed"]:
+            new_completed = st.checkbox("Done", value=info["completed"], key=comp_key, disabled=disable_checkbox)
+            if new_completed != info["completed"] and not disable_checkbox:
                 info["completed"] = new_completed
                 if info["completed"] and not info.get("logged_on"):
                     info["logged_on"] = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -212,23 +291,27 @@ with daily_tab:
                     "Category": info["category"]
                 })
 
-            # ➕ Add new interval
+            # ➕ Add new interval (smart default to last end)
             if st.button(f"Add Interval to {act}", key=f"addint_{day_str}_{act}"):
-                info["intervals"].append({"start": "09:00 AM", "end": "10:00 AM"})
+                last_end = info["intervals"][-1]["end"] if info["intervals"] else "09:00 AM"
+                new_start_str = last_end
+                new_end_dt = datetime.combine(selected_date, str_to_time(last_end)) + timedelta(hours=1)
+                new_end_str = time_to_str(new_end_dt.time())
+                info["intervals"].append({"start": new_start_str, "end": new_end_str})
                 save_routine(data)
                 st.rerun()
 
             # ── Time Tracker ───────────────────────────────────────
             st.markdown("### ⏲️ Time Tracker")
             timer = info["timer"]
-            now = time_mod.time()
+            now_unix = time_mod.time()
 
             # Update if running
             if timer["state"] == "running":
                 if timer["last_update"] is not None:
-                    delta = now - timer["last_update"]
+                    delta = now_unix - timer["last_update"]
                     timer["accumulated_seconds"] += delta
-                timer["last_update"] = now
+                timer["last_update"] = now_unix
                 save_routine(data)
 
             elapsed_seconds = int(timer["accumulated_seconds"])
@@ -288,11 +371,12 @@ with daily_tab:
     st.markdown("---")
     if total_acts > 0:
         progress = (completed / total_acts) * 100
-        st.progress(progress / 100)
-        st.write(f"**Activities**: {total_acts} | Completed: **{completed}**")
-        st.write(f"**Progress**: {progress:.1f}%")
-        st.write(f"**Total planned time**: {total_planned_minutes} min ≈ {total_planned_minutes/60:.1f} hours")
-        st.write(f"**Total actual time**: {format_time(total_actual_seconds)} ≈ {total_actual_seconds/3600:.1f} hours")
+        st.progress(progress / 100, text=f"Progress: {progress:.1f}%")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Activities", total_acts)
+        col2.metric("Completed", completed)
+        col3.metric("Planned Hours", f"{total_planned_minutes/60:.1f}")
+        col4.metric("Actual Hours", f"{total_actual_seconds/3600:.1f}")
 
         # 📊 Timeline chart
         if timeline_data:
@@ -300,8 +384,8 @@ with daily_tab:
             fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", color="Category",
                               color_discrete_map=CATEGORIES)
             fig.update_yaxes(autorange="reversed")  # Gantt style
-            fig.update_layout(xaxis_title="Time")
-            st.plotly_chart(fig, use_containwidther_=True)
+            fig.update_layout(xaxis_title="Time", height=400, plot_bgcolor="#fff")
+            st.plotly_chart(fig, use_container_width=True)
 
     else:
         st.info("No activities yet. Use the sidebar to add one!")
@@ -393,7 +477,7 @@ with habits_tab:
                     fig = px.bar(df, x="Date", y="Completed", color="Completed",
                                  color_continuous_scale=["lightgray", "green"])
                     fig.update_layout(showlegend=False, height=150)
-                    st.plotly_chart(fig, width=True)
+                    st.plotly_chart(fig, use_container_width=True)
 
     else:
         st.info("No habits yet. Add one above!")
@@ -423,7 +507,7 @@ with weekly_tab:
         df_week = pd.DataFrame(week_data)
         st.dataframe(df_week.style.format({"Planned Hours": "{:.1f}", "Actual Hours": "{:.1f}"}))
         fig_week = px.bar(df_week, x="Date", y=["Planned Hours", "Actual Hours"], barmode="group", title="Weekly Planned vs Actual Time")
-        st.plotly_chart(fig_week)
+        st.plotly_chart(fig_week, use_container_width=True)
     else:
         st.info("No data for this week.")
 
@@ -446,7 +530,7 @@ with analytics_tab:
         # Total time by category
         cat_time = df_all.groupby("Category")["Actual Hours"].sum().reset_index()
         fig_pie = px.pie(cat_time, values="Actual Hours", names="Category", title="Time Distribution by Category")
-        st.plotly_chart(fig_pie)
+        st.plotly_chart(fig_pie, use_container_width=True)
 
         # Completion rate
         completion_rate = df_all["Completed"].mean() * 100
@@ -456,6 +540,6 @@ with analytics_tab:
         df_all["Date"] = pd.to_datetime(df_all["Date"])
         time_series = df_all.groupby("Date")["Actual Hours"].sum().reset_index()
         fig_line = px.line(time_series, x="Date", y="Actual Hours", title="Daily Actual Time Spent")
-        st.plotly_chart(fig_line)
+        st.plotly_chart(fig_line, use_container_width=True)
     else:
         st.info("No data available for analytics.")

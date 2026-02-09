@@ -242,6 +242,25 @@
           "last_update": null
         }
       }
+    },
+    "2026-02-10": {
+      "Seeing a YouTube for projects": {
+        "completed": false,
+        "notes": "",
+        "category": "Leisure",
+        "intervals": [
+          {
+            "start": "1:45 AM",
+            "end": "2:00 AM"
+          }
+        ],
+        "logged_on": null,
+        "timer": {
+          "state": "stopped",
+          "accumulated_seconds": 1675.5575528144836,
+          "last_update": null
+        }
+      }
     }
   },
   "habits": {
