@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50th BCS Revision Companion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .header .tagline {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-card .label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 20px;
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .study-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .timer-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: white;
+            text-align: center;
+        }
+
+        .timer-display {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .timer-display.running {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #f5576c;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .hour-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .hour-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .hour-card.active {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+
+        .hour-card.completed {
+            border-color: #4caf50;
+            background: rgba(76, 175, 80, 0.1);
+        }
+
+        .hour-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hour-card .topics {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .hour-card .checkmark {
+            color: #4caf50;
+            font-size: 1.5em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4caf50 0%, #8bc34a 100%);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .quiz-section {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .quiz-question {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .quiz-option {
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quiz-option:hover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .quiz-option.correct {
+            border-color: #4caf50;
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .quiz-option.wrong {
+            border-color: #f44336;
+            background: rgba(244, 67, 54, 0.2);
+        }
+
+        .motivation-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .break-reminder {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .strategy-tips {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .strategy-tips ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .strategy-tips li {
+            margin: 5px 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 1000;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .audio-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+            font-size: 1.5em;
+            z-index: 999;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 50th BCS Power Revision</h1>
+            <p class="tagline">Your 6-8 Hour Victory Companion</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="label">Hours Completed</div>
+                <div class="value" id="hoursCompleted">0/8</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Quiz Score</div>
+                <div class="value" id="quizScore">0/0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Focus Time</div>
+                <div class="value" id="totalFocusTime">0h 0m</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Readiness</div>
+                <div class="value" id="readiness">0%</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="overallProgress" style="width: 0%">0%</div>
+        </div>
+
+        <div class="main-content">
+            <div class="study-section">
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('roadmap')">📋 Roadmap</div>
+                    <div class="tab" onclick="switchTab('quiz')">🎯 Quick Quiz</div>
+                    <div class="tab" onclick="switchTab('strategy')">💡 Strategy</div>
+                </div>
+
+                <div id="roadmapContent">
+                    <div id="hoursList"></div>
+                </div>
+
+                <div id="quizContent" class="hidden">
+                    <div class="quiz-section">
+                        <h2>Quick Knowledge Check</h2>
+                        <p style="color: #666; margin: 10px 0;">Test your retention with rapid-fire questions</p>
+                        <div id="quizContainer"></div>
+                        <button class="btn btn-primary" onclick="loadNewQuiz()" style="margin-top: 15px;">New Quiz</button>
+                    </div>
+                </div>
+
+                <div id="strategyContent" class="hidden">
+                    <div class="strategy-tips">
+                        <h3>🎯 Exam Strategy Reminders</h3>
+                        <ul>
+                            <li><strong>Skip Rule:</strong> If confidence < 70%, SKIP (avoid -5 penalty)</li>
+                            <li><strong>Target:</strong> Attempt 140-150 questions accurately</li>
+                            <li><strong>Safe Zones:</strong> Math formulas, Current affairs facts, Liberation War</li>
+                            <li><strong>Danger Zones:</strong> English/Bangla deep literature (guess wisely)</li>
+                            <li><strong>Time Management:</strong> 1 minute per question = 200 mins total</li>
+                            <li><strong>Score Target:</strong> 95-105 marks (safe for preliminary)</li>
+                        </ul>
+                    </div>
+
+                    <div class="motivation-box">
+                        <h3 style="margin-bottom: 10px;">📊 Your Strength Distribution</h3>
+                        <div style="text-align: left; margin-top: 15px;">
+                            <div style="margin: 10px 0;"><strong>Math + International:</strong> 30-35 correct (HIGH ROI)</div>
+                            <div style="margin: 10px 0;"><strong>Bangladesh Affairs:</strong> 15-18 correct (SAFE)</div>
+                            <div style="margin: 10px 0;"><strong>Computer + Ethics + Science:</strong> 25-30 correct</div>
+                            <div style="margin: 10px 0;"><strong>Languages + Others:</strong> 25-30 correct (SELECTIVE)</div>
+                        </div>
+                    </div>
+
+                    <div class="break-reminder">
+                        <h4>⏰ Break Schedule</h4>
+                        <p>• After Hour 2: 10-min break (stretch, water)</p>
+                        <p>• After Hour 4: 15-min break (snack, fresh air)</p>
+                        <p>• After Hour 6: 10-min break (eye rest)</p>
+                        <p><strong>Total study: 6-8 hours | Breaks: 35-45 mins</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer-section">
+                <h2>⏱️ Current Session</h2>
+                <div id="currentHourTitle">Ready to Start</div>
+                <div class="timer-display" id="timerDisplay">00:00</div>
+                <div style="margin: 15px 0;">
+                    <button class="btn btn-primary" id="startBtn" onclick="startTimer()">Start Hour</button>
+                    <button class="btn btn-secondary" id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
+                    <button class="btn btn-secondary" id="resetBtn" onclick="resetTimer()">Reset</button>
+                </div>
+                <div style="margin-top: 20px;">
+                    <button class="btn btn-secondary" onclick="completeCurrentHour()">Mark Complete ✓</button>
+                </div>
+
+                <div class="motivation-box" style="margin-top: 25px; background: rgba(255,255,255,0.2);">
+                    <div id="motivationText">Every minute counts! 🚀</div>
+                </div>
+
+                <div style="margin-top: 25px; background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
+                    <h4 style="margin-bottom: 10px;">📌 Quick Notes</h4>
+                    <textarea id="quickNotes" style="width: 100%; height: 100px; padding: 10px; border-radius: 8px; border: none; resize: vertical;" placeholder="Jot down formulas, facts, or reminders..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-toggle" onclick="toggleSound()" id="audioToggle">🔊</div>
+
+    <script>
+        // Study Plan Data
+        const studyPlan = [
+            {
+                hour: 1,
+                title: "Mathematical Reasoning",
+                duration: 60,
+                topics: "Formula recognition, shortcuts, 20 solved problems",
+                tips: "Don't solve from scratch—RECOGNIZE patterns. Focus on percentage, ratio, series."
+            },
+            {
+                hour: 2,
+                title: "International Affairs",
+                duration: 60,
+                topics: "2024-25 current events, UN bodies, BRICS, capitals",
+                tips: "Flashcard mode: Quick recall. Focus on recency (last 6 months)."
+            },
+            {
+                hour: 3,
+                title: "Bangladesh Affairs",
+                duration: 60,
+                topics: "Liberation War, Constitution, 2024 updates",
+                tips: "Factual recall only. Skip deep analysis. Know key dates & amendments."
+            },
+            {
+                hour: 4,
+                title: "Computer + Ethics + Science",
+                duration: 60,
+                topics: "IT acronyms, SDGs, good governance, science basics",
+                tips: "Conceptual clarity > memorization. Focus on definitions & applications."
+            },
+            {
+                hour: 5,
+                title: "Language Survival",
+                duration: 60,
+                topics: "English & Bangla grammar, top authors, literary MCQs",
+                tips: "Grammar rules > literature. Stick to safe recall questions."
+            },
+            {
+                hour: 6,
+                title: "🎯 MOCK TEST",
+                duration: 60,
+                topics: "80-100 MCQs from previous BCS papers",
+                tips: "Simulate real exam. Track accuracy. Identify weak spots."
+            },
+            {
+                hour: 7,
+                title: "Targeted Weakness Revision",
+                duration: 60,
+                topics: "Based on mock test results",
+                tips: "Don't panic! Fix gaps. Re-solve problem areas."
+            },
+            {
+                hour: 8,
+                title: "Final Power Hour",
+                duration: 60,
+                topics: "One-page cheat sheet, mental prep, strategy review",
+                tips: "Consolidate formulas. Visualize success. NO new topics!"
+            }
+        ];
+
+        // Quiz Bank
+        const quizBank = [
+            {
+                q: "Mathematical Reasoning: If a number is increased by 20% and then decreased by 20%, the net change is?",
+                options: ["No change", "4% decrease", "4% increase", "2% decrease"],
+                correct: 1,
+                explanation: "Let original = 100. After +20% = 120. After -20% of 120 = 96. Net = 4% decrease."
+            },
+            {
+                q: "International Affairs: BRICS expanded in 2024. Which country is NOT a new member?",
+                options: ["UAE", "Egypt", "Iran", "Brazil"],
+                correct: 3,
+                explanation: "Brazil is an original BRICS member (B in BRICS). UAE, Egypt, Iran joined in 2024."
+            },
+            {
+                q: "Bangladesh Liberation War: How many sectors were there?",
+                options: ["7", "9", "11", "13"],
+                correct: 2,
+                explanation: "11 sectors were created during the Liberation War of 1971."
+            },
+            {
+                q: "Computer: HTTP stands for?",
+                options: ["Hyper Transfer Text Protocol", "Hyper Text Transfer Protocol", "High Text Transfer Protocol", "Hyper Text Transmission Protocol"],
+                correct: 1,
+                explanation: "HTTP = HyperText Transfer Protocol (foundation of web communication)."
+            },
+            {
+                q: "Ethics: Good governance principle that ensures citizens can access information?",
+                options: ["Accountability", "Transparency", "Participation", "Equity"],
+                correct: 1,
+                explanation: "Transparency ensures openness and access to information for citizens."
+            },
+            {
+                q: "General Science: Which vitamin is produced when skin is exposed to sunlight?",
+                options: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
+                correct: 2,
+                explanation: "Vitamin D is synthesized in skin upon UV exposure from sunlight."
+            },
+            {
+                q: "Bangladesh Constitution: Which amendment is known as the '5th Amendment'?",
+                options: ["Martial law validation", "Parliament dissolution", "Secularism removal", "Prime Minister power"],
+                correct: 0,
+                explanation: "5th Amendment validated martial law proclamations (later declared illegal)."
+            },
+            {
+                q: "Math: Simple Interest formula is?",
+                options: ["P×R×T", "(P×R×T)/100", "P(1+R)^T", "P+R+T"],
+                correct: 1,
+                explanation: "Simple Interest = (Principal × Rate × Time) / 100"
+            }
+        ];
+
+        // State Management
+        let currentHour = 0;
+        let timerInterval = null;
+        let secondsElapsed = 0;
+        let isPaused = false;
+        let totalStudySeconds = 0;
+        let completedHours = [];
+        let quizAttempts = 0;
+        let quizCorrect = 0;
+        let soundEnabled = true;
+
+        // Initialize
+        function init() {
+            renderHours();
+            loadNewQuiz();
+            loadFromStorage();
+            updateStats();
+            setInterval(rotateMotivation, 30000); // Change motivation every 30 seconds
+        }
+
+        function renderHours() {
+            const container = document.getElementById('hoursList');
+            container.innerHTML = studyPlan.map((hour, index) => `
+                <div class="hour-card ${currentHour === index ? 'active' : ''} ${completedHours.includes(index) ? 'completed' : ''}" 
+                     onclick="selectHour(${index})">
+                    <h3>
+                        <span>Hour ${hour.hour}: ${hour.title}</span>
+                        ${completedHours.includes(index) ? '<span class="checkmark">✓</span>' : ''}
+                    </h3>
+                    <div class="topics">
+                        <strong>Focus:</strong> ${hour.topics}<br>
+                        <strong>💡 Tip:</strong> ${hour.tips}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function selectHour(index) {
+            currentHour = index;
+            document.getElementById('currentHourTitle').textContent = `Hour ${studyPlan[index].hour}: ${studyPlan[index].title}`;
+            renderHours();
+            resetTimer();
+        }
+
+        let startTime = null;
+        let pausedTime = 0;
+
+        function startTimer() {
+            if (!timerInterval) {
+                // Record the actual start time
+                startTime = Date.now() - (secondsElapsed * 1000);
+                
+                timerInterval = setInterval(() => {
+                    if (!isPaused) {
+                        // Calculate elapsed time based on actual clock time
+                        const now = Date.now();
+                        const elapsed = Math.floor((now - startTime) / 1000);
+                        const increment = elapsed - secondsElapsed;
+                        
+                        secondsElapsed = elapsed;
+                        totalStudySeconds += increment;
+                        
+                        updateTimerDisplay();
+                        updateStats();
+                        checkMilestones();
+                        
+                        // Auto-save every 30 seconds
+                        if (totalStudySeconds % 30 === 0) {
+                            saveToStorage();
+                        }
+                    }
+                }, 1000);
+                document.getElementById('startBtn').disabled = true;
+                document.getElementById('pauseBtn').disabled = false;
+                document.getElementById('startBtn').textContent = 'Running...';
+                document.getElementById('timerDisplay').classList.add('running');
+            }
+        }
+
+        function pauseTimer() {
+            isPaused = !isPaused;
+            document.getElementById('pauseBtn').textContent = isPaused ? 'Resume' : 'Pause';
+            if (isPaused) {
+                document.getElementById('timerDisplay').classList.remove('running');
+                pausedTime = Date.now();
+            } else {
+                document.getElementById('timerDisplay').classList.add('running');
+                // Adjust start time to account for pause duration
+                if (pausedTime > 0) {
+                    const pauseDuration = Date.now() - pausedTime;
+                    startTime += pauseDuration;
+                    pausedTime = 0;
+                }
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            secondsElapsed = 0;
+            isPaused = false;
+            startTime = null;
+            pausedTime = 0;
+            updateTimerDisplay();
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('startBtn').textContent = 'Start Hour';
+            document.getElementById('pauseBtn').disabled = true;
+            document.getElementById('pauseBtn').textContent = 'Pause';
+            document.getElementById('timerDisplay').classList.remove('running');
+        }
+
+        function completeCurrentHour() {
+            if (!completedHours.includes(currentHour)) {
+                completedHours.push(currentHour);
+                playSound('complete');
+                showNotification(`✅ Hour ${studyPlan[currentHour].hour} Complete!`, 'Great progress! Keep going! 🚀');
+                saveToStorage();
+                
+                if (currentHour < studyPlan.length - 1) {
+                    currentHour++;
+                    selectHour(currentHour);
+                }
+                
+                renderHours();
+                updateStats();
+            }
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(secondsElapsed / 60);
+            const secs = secondsElapsed % 60;
+            document.getElementById('timerDisplay').textContent = 
+                `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function updateStats() {
+            const hoursComp = completedHours.length;
+            const totalHours = Math.floor(totalStudySeconds / 3600);
+            const totalMins = Math.floor((totalStudySeconds % 3600) / 60);
+            const readiness = Math.min(100, Math.round((hoursComp / 8) * 100));
+            
+            document.getElementById('hoursCompleted').textContent = `${hoursComp}/8`;
+            document.getElementById('quizScore').textContent = `${quizCorrect}/${quizAttempts}`;
+            document.getElementById('totalFocusTime').textContent = `${totalHours}h ${totalMins}m`;
+            document.getElementById('readiness').textContent = `${readiness}%`;
+            document.getElementById('overallProgress').style.width = `${readiness}%`;
+            document.getElementById('overallProgress').textContent = `${readiness}%`;
+        }
+
+        function checkMilestones() {
+            const mins = Math.floor(secondsElapsed / 60);
+            if (mins === 30 && secondsElapsed % 60 === 0) {
+                showNotification('⏰ Halfway There!', 'Great focus! Keep it up for 30 more minutes.');
+            }
+            if (mins === 55 && secondsElapsed % 60 === 0) {
+                showNotification('🏁 Almost Done!', '5 minutes left. Finish strong!');
+            }
+            if (mins === 60 && secondsElapsed % 60 === 0) {
+                playSound('alert');
+                showNotification('✅ Hour Complete!', 'Time for a quick break or move to next topic.');
+            }
+        }
+
+        function loadNewQuiz() {
+            const container = document.getElementById('quizContainer');
+            const randomQuestions = [...quizBank].sort(() => 0.5 - Math.random()).slice(0, 3);
+            
+            container.innerHTML = randomQuestions.map((quiz, qIndex) => `
+                <div class="quiz-question" id="quiz-${qIndex}">
+                    <strong>Q${qIndex + 1}:</strong> ${quiz.q}
+                    <div class="quiz-options">
+                        ${quiz.options.map((opt, oIndex) => `
+                            <div class="quiz-option" onclick="checkAnswer(${qIndex}, ${oIndex}, ${quiz.correct})">${opt}</div>
+                        `).join('')}
+                    </div>
+                    <div id="explanation-${qIndex}" style="margin-top: 10px; display: none; color: #666; font-size: 0.9em;"></div>
+                </div>
+            `).join('');
+        }
+
+        function checkAnswer(qIndex, selected, correct) {
+            const quizQuestion = document.getElementById(`quiz-${qIndex}`);
+            const options = quizQuestion.querySelectorAll('.quiz-option');
+            const explanation = document.getElementById(`explanation-${qIndex}`);
+            
+            quizAttempts++;
+            
+            options.forEach((opt, index) => {
+                opt.style.pointerEvents = 'none';
+                if (index === correct) {
+                    opt.classList.add('correct');
+                }
+                if (index === selected && selected !== correct) {
+                    opt.classList.add('wrong');
+                }
+            });
+            
+            if (selected === correct) {
+                quizCorrect++;
+                playSound('correct');
+            } else {
+                playSound('wrong');
+            }
+            
+            const currentQuiz = quizBank.find(q => quizQuestion.textContent.includes(q.q));
+            if (currentQuiz) {
+                explanation.textContent = `💡 ${currentQuiz.explanation}`;
+                explanation.style.display = 'block';
+            }
+            
+            updateStats();
+            saveToStorage();
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('roadmapContent').classList.add('hidden');
+            document.getElementById('quizContent').classList.add('hidden');
+            document.getElementById('strategyContent').classList.add('hidden');
+            
+            document.getElementById(`${tab}Content`).classList.remove('hidden');
+        }
+
+        const motivations = [
+            "Every minute counts! 🚀",
+            "You're building your future right now! 💪",
+            "Focus now, celebrate later! 🎯",
+            "Small steps = Big results! 📈",
+            "Trust your preparation! ✨",
+            "You've got this! 🔥",
+            "Excellence is a habit! 🌟",
+            "Stay calm, stay focused! 🧘",
+            "Your dedication will pay off! 💎",
+            "Keep pushing forward! ⚡"
+        ];
+
+        function rotateMotivation() {
+            const random = motivations[Math.floor(Math.random() * motivations.length)];
+            document.getElementById('motivationText').textContent = random;
+        }
+
+        function showNotification(title, message) {
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.innerHTML = `<h3>${title}</h3><p>${message}</p>`;
+            document.body.appendChild(notif);
+            
+            setTimeout(() => {
+                notif.remove();
+            }, 5000);
+        }
+
+        function playSound(type) {
+            if (!soundEnabled) return;
+            
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            if (type === 'complete') {
+                oscillator.frequency.value = 800;
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+            } else if (type === 'correct') {
+                oscillator.frequency.value = 600;
+                gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.3);
+            } else if (type === 'wrong') {
+                oscillator.frequency.value = 200;
+                gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.3);
+            } else if (type === 'alert') {
+                oscillator.frequency.value = 1000;
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+            }
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            document.getElementById('audioToggle').textContent = soundEnabled ? '🔊' : '🔇';
+        }
+
+        function saveToStorage() {
+            const data = {
+                completedHours,
+                totalStudySeconds,
+                quizAttempts,
+                quizCorrect,
+                currentHour,
+                notes: document.getElementById('quickNotes').value
+            };
+            localStorage.setItem('bcsRevision', JSON.stringify(data));
+        }
+
+        function loadFromStorage() {
+            const saved = localStorage.getItem('bcsRevision');
+            if (saved) {
+                const data = JSON.parse(saved);
+                completedHours = data.completedHours || [];
+                totalStudySeconds = data.totalStudySeconds || 0;
+                quizAttempts = data.quizAttempts || 0;
+                quizCorrect = data.quizCorrect || 0;
+                currentHour = data.currentHour || 0;
+                document.getElementById('quickNotes').value = data.notes || '';
+                selectHour(currentHour);
+            }
+        }
+
+        // Auto-save notes
+        document.addEventListener('DOMContentLoaded', () => {
+            init();
+            document.getElementById('quickNotes').addEventListener('input', saveToStorage);
+        });
+
+        // Prevent accidental page close
+        window.addEventListener('beforeunload', (e) => {
+            if (totalStudySeconds > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+
+        // Handle tab visibility changes - ensure timer keeps running
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden && timerInterval && !isPaused && startTime) {
+                // Tab became visible again - force immediate update to catch up
+                const now = Date.now();
+                const elapsed = Math.floor((now - startTime) / 1000);
+                const increment = elapsed - secondsElapsed;
+                
+                secondsElapsed = elapsed;
+                totalStudySeconds += increment;
+                
+                updateTimerDisplay();
+                updateStats();
+                saveToStorage();
+            }
+        });
+    </script>
+</body>
+</html>

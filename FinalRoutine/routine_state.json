@@ -166,5 +166,98 @@
       "end": "12:00",
       "logged_on": null
     }
+  },
+  "2026-01-28": {
+    "Final Grammer, Math, Geo": {
+      "completed": true,
+      "notes": "Non sober version, only videos, from now [https://youtu.be/P2PI6DCvp28 ]\nSomas Video Done\n",
+      "intervals": [
+        {
+          "start": "00:00",
+          "end": "07:00"
+        }
+      ],
+      "logged_on": "2026-01-28 17:15"
+    },
+    "Study Session Final 1": {
+      "completed": false,
+      "notes": "",
+      "intervals": [
+        {
+          "start": "12:00",
+          "end": "18:00"
+        }
+      ],
+      "logged_on": null
+    },
+    "Final Video Review": {
+      "completed": false,
+      "notes": "50 BCS Preli Mathematics Lecture-22: সমান্তর ধারা\n https://youtu.be/XH3xm-2tgxI\n50 BCS Regular Batch Bangla Grammar Lecture 13: বাংলা বানান \nhttps://youtu.be/nCTo0689k5o\n50 BCS Regular Batch Bangla Grammar Lecture 14: প্রয়োগ-অপপ্রয়োগ\nhttps://youtu.be/vU_e_m_BTrA",
+      "intervals": [
+        {
+          "start": "17:20",
+          "end": "19:00"
+        }
+      ],
+      "logged_on": null
+    }
+  },
+  "2026-02-09": {
+    "Creating daily routine app + Utility": {
+      "completed": false,
+      "notes": "",
+      "category": "Work",
+      "intervals": [
+        {
+          "start": "09:00 PM",
+          "end": "10:00 PM"
+        }
+      ],
+      "logged_on": null,
+      "timer": {
+        "state": "paused",
+        "accumulated_seconds": 43.616045236587524,
+        "start_timestamp": null,
+        "pause_timestamp": null,
+        "last_update": null
+      }
+    }
+  },
+  "routines": {
+    "2026-02-09": {
+      "Create a daily routine app": {
+        "completed": true,
+        "notes": "Created, testing and doing recent country ",
+        "category": "Work",
+        "intervals": [
+          {
+            "start": "9:45 PM",
+            "end": "10:00 PM"
+          }
+        ],
+        "logged_on": "2026-02-09 22:00",
+        "timer": {
+          "state": "stopped",
+          "accumulated_seconds": 93.80664849281311,
+          "last_update": null
+        }
+      }
+    }
+  },
+  "habits": {
+    "Gym": {
+      "frequency": "Custom (times per week)",
+      "target": 3,
+      "completions": {},
+      "notes": "📅 Day 1 — Heavy Power (Lower + Push + Pull)\nWarm-up: Bike 5 min → Hip openers → Glute bridges 2×15\nExercise\nSets × Reps\nNotes\nBack Squat\n5 × 5\nHeavy, add +2.5 kg weekly if fast\nWeighted Chin-ups (neutral or supinated)\n3 × 4–6\nAdd weight or reps weekly\nWeighted Dips\n3 × 5–7\nChest-forward lean\nDB Incline Press\n3 × 8–10\n\n\nIso-Row (wide grip)\n3 × 8–10\nChest-supported\nLeg Curl (lying or seated)\n3 × 10–12\nAdded for hamstring frequency\nBand Pull-Apart\n2 × 15–20\n\n\nWeighted Sit-ups or Cable Crunch\n3 × 12–15\n\n\nPlank Shoulder Taps\n3 × 20–25/side\n\n\nIncline Treadmill Walk\n10–12 min\nIncline 5–7, speed 5–5.5 km/h, HR 130–140\n\n→ Leg press removed to keep Day 1 survivable and recovery high\n📅 Day 2 — Strength Focus (Posterior Chain + Press)\nWarm-up: Treadmill 5 min → Shoulder mobility + cat-cow\nExercise\nSets × Reps\nNotes\nRomanian Deadlift (barbell)\n4 × 6–8\nConventional or sumo stance\nSmith Bench Press\n4 × 6–8\nClose grip or normal\nFarmer Walks\n4 × 30–40 m\nHeavy, trap bar or DBs\nSmith or Barbell Row\n4 × 7–9\n\n\nShoulder Press Machine\n3 × 8–12\n\n\nIso-Row (close grip)\n3 × 10–12\n\n\nFace Pulls\n3 × 15–20\n\n\nHanging Leg Raise\n3 × 12–15\nSlow eccentric\nPlank (regular)\n3 × 70–90 sec\n\n\nEMOM Run\n10 rounds\n40 s run @ 10–11 km/h / 20 s walk @ 5–6 km/h, incline 1–2\n\n📅 Day 3 — Explosive + Hypertrophy Volume\nWarm-up: Bike 5 min → Ankle + hip mobility\nExercise\nSets × Reps\nNotes\nSpeed Squat (50–65% 1RM)\n6 × 3\nExplosive, 90 s rest\nHack Squat or Leg Press\n3 × 10–12\nDeep, controlled\nWeighted Pull-ups\n4 × 6–8\nLighter than Day 1\nChest Press Machine\n3 × 10–12\n\n\nDips (bodyweight or weighted)\n3 × 8–12\n\n\nCable Lateral Raise\n3 × 12–15\n\n\nTriceps Pushdown\n3 × 12–15\n\n\nLow Row (close grip)\n3 × 8–12\n\n\nUpright Row (wide, to chest)\n3 × 10–12\n\n\nRear Delt Fly + Shrugs superset\n3 × 12–15 each\n\n\nCable Crunch\n3 × 15\n\n\nAb Wheel Rollout\n3 × 8–12\n\n\nSide Plank\n3 × 45–60 s/side\n\n\nTreadmill Intervals\n5 × 200 m\n45 s @ 12–13.5 km/h / 45 s walk, incline 0–1\n\n📅 Day 4 — Power + Active Recovery\nWarm-up: Bike 5 min → Hamstring + thoracic mobility\nExercise\nSets × Reps\nNotes\nTrap Bar Deadlift\n4 × 5\nExplosive, +2.5–5 kg weekly\nSmith Overhead Press/ Incline Press\n3 × 6–8\n\n\nPec Deck or Cable Fly\n3 × 12–15\n\n\nWide-Grip Cable Row\n3 × 8–12\n\n\nSeated Leg Curl\n3 × 12–15\n\n\nHammer Curl\n3 × 10–12\n\n\nFace Pulls\n3 × 15–20\n\n\nHanging Knee Raise\n3 × 12–15\n\n\nSide Plank Walk or Stir-the-Pot\n3 × 40–50 s\n\n\nSprint Conditioning\n6 × 100 m\n15 s all-out @ 13.5–15 km/h / 45 s walk, incline 0–1\nMobility Flow + Light Bands\n10–12 min\nFace pulls, curls, kickbacks, dislocates\n\n",
+      "created": "2026-02-09"
+    },
+    "Book Reaing": {
+      "frequency": "Daily",
+      "target": 1,
+      "completions": {},
+      "notes": "Any books",
+      "created": "2026-02-09"
+    }
   }
 }
