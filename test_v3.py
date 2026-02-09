@@ -539,7 +539,7 @@ with analytics_tab:
         # Total time by category
         cat_time = df_all.groupby("Category")["Actual Hours"].sum().reset_index()
         fig_pie = px.pie(cat_time, values="Actual Hours", names="Category", title="Time Distribution by Category")
-        st.plotly_chart(fig_pie, width=True)
+        st.plotly_chart(fig_pie, use_container_width=True)
 
         # Completion rate
         completion_rate = df_all["Completed"].mean() * 100
@@ -549,6 +549,6 @@ with analytics_tab:
         df_all["Date"] = pd.to_datetime(df_all["Date"])
         time_series = df_all.groupby("Date")["Actual Hours"].sum().reset_index()
         fig_line = px.line(time_series, x="Date", y="Actual Hours", title="Daily Actual Time Spent")
-        st.plotly_chart(fig_line, width=True)
+        st.plotly_chart(fig_line, use_container_width=True)
     else:
         st.info("No data available for analytics.")
