@@ -1,282 +1,62 @@
 {
-  "2026-01-22": {
-    "App git upload + Taking Final High": {
-      "completed": true,
-      "notes": "Gym D4\nThursday 22 January 2026 at 2:08 pm\n\nCycling (Indoor)\nSet 1: 5:00\n\n\nPull Up\nSet 1: +93.4 kg × 8 reps\n\n\nChin Up\nSet 1: +93.4 kg × 8 reps\n\n\nChest Dip\nSet 1: +93.4 kg × 10 reps\n\n\nDeadlift (Barbell)\nSet 1: 70 kg × 5 reps\nSet 2: 70 kg × 5 reps\nSet 3: 70 kg × 5 reps\nSet 4: 70 kg × 5 reps\n\n\nIncline Bench Press (Smith Machine)\nSet 1: 60 kg × 8 reps\nSet 2: 60 kg × 8 reps\nSet 3: 60 kg × 10 reps\n\n\nPec Deck (Machine)\nSet 1: 45 kg × 10 reps\nSet 2: 45 kg × 10 reps\nSet 3: 45 kg × 10 reps\n\n\nSeated Row (Cable)\nSet 1: 60 kg × 10 reps\nSet 2: 60 kg × 10 reps\nSet 3: 60 kg × 10 reps\n\n\nSeated Leg Curl (Machine)\nSet 1: 10 kg × 10 reps\nSet 2: 10 kg × 10 reps\nSet 3: 20 kg × 10 reps\n\n\nHammer Curl (Cable)\nSet 1: 10 kg × 10 reps\nSet 2: 15 kg × 10 reps\nSet 3: 15 kg × 10 reps\n\n\nFace Pull (Cable)\nSet 1: 30 kg × 10 reps\nSet 2: 35 kg × 10 reps\nSet 3: 40 kg × 10 reps\n\n\nHanging Knee Raise\nSet 1: 10 reps\n\n\nRunning (Treadmill)\nSet 1: 1.15 km, 10:15\n",
-      "start": "02:30",
-      "end": "03:00",
-      "logged_on": "2026-01-22 20:19"
-    },
-    "Sleep": {
-      "completed": true,
-      "notes": "Next sleep Friday (23-01-26) 10–11 pm",
-      "start": "03:00",
-      "end": "12:30",
-      "logged_on": "2026-01-22 20:19"
-    },
-    "GYM D4": {
-      "completed": true,
-      "notes": "",
-      "start": "13:10",
-      "end": "16:10",
-      "logged_on": "2026-01-22 20:19"
-    },
-    "Launch + Study Prep": {
-      "completed": true,
-      "notes": "",
-      "start": "16:45",
-      "end": "17:30",
-      "logged_on": "2026-01-22 20:19"
-    },
-    "Suruj Time": {
-      "completed": true,
-      "notes": "Suruj has arrived at 20:28, gone 2200",
-      "start": "20:30",
-      "end": "21:55",
-      "logged_on": "2026-01-22 21:53"
-    },
-    "Math Logarithm": {
-      "completed": true,
-      "notes": "",
-      "start": "22:30",
-      "end": "23:30",
-      "logged_on": "2026-01-22 23:28"
-    }
-  },
-  "2026-01-23": {
-    "Preparing Environment for education": {
-      "completed": true,
-      "notes": "Preparing Table for Rigorous Study ",
-      "start": "01:30",
-      "end": "01:55",
-      "logged_on": "2026-01-23 01:56"
-    },
-    "Final High + Log Math Finish": {
-      "completed": true,
-      "notes": "Log Math Finished but need practice",
-      "start": "02:00",
-      "end": "02:25",
-      "logged_on": "2026-01-23 02:26"
-    },
-    "Taking Night Nap": {
-      "completed": true,
-      "notes": "Complete Sleep",
-      "start": "02:50",
-      "end": "12:05",
-      "logged_on": "2026-01-23 14:16"
-    },
-    "Kadalu Work": {
-      "completed": true,
-      "notes": "Updated limit and Service FAQs",
-      "start": "15:00",
-      "end": "17:30",
-      "logged_on": "2026-01-23 17:12"
-    },
-    "Study Session 1": {
-      "completed": false,
-      "notes": "English Grammar Lecture-10: Solve Class-1",
-      "start": "20:50",
-      "end": "21:30",
-      "logged_on": null
-    },
-    "Study Session 2": {
-      "completed": false,
-      "notes": "",
-      "start": "19:15",
-      "end": "21:45",
-      "logged_on": null
-    },
-    "Study Session 3": {
-      "completed": false,
-      "notes": "",
-      "start": "22:00",
-      "end": "23:55",
-      "logged_on": null
-    }
-  },
-  "2026-01-24": {
-    "Kadalu Work": {
-      "completed": true,
-      "notes": "Faqs and Limits Upgraded\nNext day email auth, dashboard, admin, database migration and making plans test",
-      "start": "00:00",
-      "end": "02:00",
-      "logged_on": "2026-01-24 01:55"
-    },
-    "Genuinely last high": {
-      "completed": true,
-      "notes": "Done, preparing to sleep\nNot Done \nNo Gym This Week, if possible Walk/Run\nElse \n25, 27 and 29 Jan: 3x8 Pull Up, 3x20 Squat Jump, 3 x 20 Lunge (each leg), 3x15 Push Up",
-      "start": "02:00",
-      "end": "02:30",
-      "logged_on": "2026-01-24 02:29"
-    },
-    "Kadalu Work Phase 2": {
-      "completed": true,
-      "notes": "Dash Board and Pricing Upgrade\nNo work till 30 January and so on",
-      "start": "02:30",
-      "end": "04:45",
-      "logged_on": "2026-01-24 04:33"
-    },
-    "Day 1/3 Days Study": {
-      "completed": true,
-      "notes": "1. English Grammar Lecture-10: Solve Class-1\n2 English Grammar Lecture-1: Anatomy of English Sentence\n3. Bank AME Q solution",
-      "start": "20:15",
-      "end": "23:55",
-      "logged_on": "2026-01-25 19:33"
-    }
-  },
-  "2026-01-25": {
-    "Study Session 1": {
-      "completed": true,
-      "notes": "https://youtu.be/ui9gBHk4-I8",
-      "start": "02:30",
-      "end": "06:00",
-      "logged_on": "2026-01-25 19:32"
-    },
-    "Study Session 2": {
-      "completed": true,
-      "notes": "https://youtu.be/Zv7RV1WH6rE?t=4111",
-      "start": "20:55",
-      "end": "22:50",
-      "logged_on": "2026-01-25 22:48"
-    },
-    "Lecture-1: নৈতিকতা, সুশাসন ও মূল্যবোধ- ১": {
-      "completed": true,
-      "notes": "https://youtu.be/8tAkAObmdYo",
-      "start": "22:50",
-      "end": "23:40",
-      "logged_on": "2026-01-25 23:39"
-    }
-  },
-  "2026-01-26": {
-    "Mild Rest": {
-      "completed": false,
-      "notes": "Going to bed, try rest an hour and listen afnan\n",
-      "logged_on": null,
-      "intervals": [
-        {
-          "start": "01:30",
-          "end": "02:30"
-        }
-      ]
-    },
-    "Marathon Math": {
-      "completed": false,
-      "notes": "",
-      "start": "05:30",
-      "end": "12:00",
-      "logged_on": null
-    }
-  },
-  "2026-01-28": {
-    "Final Grammer, Math, Geo": {
-      "completed": true,
-      "notes": "Non sober version, only videos, from now [https://youtu.be/P2PI6DCvp28 ]\nSomas Video Done\n",
-      "intervals": [
-        {
-          "start": "00:00",
-          "end": "07:00"
-        }
-      ],
-      "logged_on": "2026-01-28 17:15"
-    },
-    "Study Session Final 1": {
-      "completed": false,
-      "notes": "",
-      "intervals": [
-        {
-          "start": "12:00",
-          "end": "18:00"
-        }
-      ],
-      "logged_on": null
-    },
-    "Final Video Review": {
-      "completed": false,
-      "notes": "50 BCS Preli Mathematics Lecture-22: সমান্তর ধারা\n https://youtu.be/XH3xm-2tgxI\n50 BCS Regular Batch Bangla Grammar Lecture 13: বাংলা বানান \nhttps://youtu.be/nCTo0689k5o\n50 BCS Regular Batch Bangla Grammar Lecture 14: প্রয়োগ-অপপ্রয়োগ\nhttps://youtu.be/vU_e_m_BTrA",
-      "intervals": [
-        {
-          "start": "17:20",
-          "end": "19:00"
-        }
-      ],
-      "logged_on": null
-    }
-  },
-  "2026-02-09": {
-    "Creating daily routine app + Utility": {
-      "completed": false,
-      "notes": "",
-      "category": "Work",
-      "intervals": [
-        {
-          "start": "09:00 PM",
-          "end": "10:00 PM"
-        }
-      ],
-      "logged_on": null,
-      "timer": {
-        "state": "paused",
-        "accumulated_seconds": 43.616045236587524,
-        "start_timestamp": null,
-        "pause_timestamp": null,
-        "last_update": null
-      }
-    }
-  },
   "routines": {
-    "2026-02-09": {
-      "Create a daily routine app": {
-        "completed": true,
-        "notes": "Created, testing and doing recent country ",
+    "2026-02-12": {
+      "Kadalu Pricing Update": {
+        "completed": false,
+        "notes": "Updated\nChecked Plan Working\n admin@kadalu.com",
         "category": "Work",
         "intervals": [
           {
-            "start": "9:45 PM",
-            "end": "10:00 PM"
-          }
-        ],
-        "logged_on": "2026-02-09 22:00",
-        "timer": {
-          "state": "stopped",
-          "accumulated_seconds": 93.80664849281311,
-          "last_update": null
-        }
-      }
-    },
-    "2026-02-10": {
-      "Seeing a YouTube for projects": {
-        "completed": false,
-        "notes": "",
-        "category": "Leisure",
-        "intervals": [
-          {
-            "start": "1:45 AM",
-            "end": "2:00 AM"
+            "start": "6:15 AM",
+            "end": "7:00 AM"
           }
         ],
         "logged_on": null,
         "timer": {
           "state": "stopped",
-          "accumulated_seconds": 1675.5575528144836,
+          "accumulated_seconds": 3408.1815683841705,
+          "last_update": null
+        }
+      },
+      "Make a protfolio for github": {
+        "completed": true,
+        "notes": "https://nisaengineers.github.io/",
+        "category": "Work",
+        "intervals": [
+          {
+            "start": "7:50 AM",
+            "end": "9:15 AM"
+          }
+        ],
+        "logged_on": "2026-02-12 08:26",
+        "timer": {
+          "state": "stopped",
+          "accumulated_seconds": 2483.966653585434,
+          "last_update": null
+        }
+      },
+      "Test": {
+        "completed": true,
+        "notes": "",
+        "category": "Work",
+        "intervals": [
+          {
+            "start": "11:15 PM",
+            "end": "11:45 PM"
+          },
+          {
+            "start": "11:45 PM",
+            "end": "12:00 AM"
+          }
+        ],
+        "logged_on": "2026-02-12 23:26",
+        "timer": {
+          "state": "stopped",
+          "accumulated_seconds": 2998.9947509765625,
           "last_update": null
         }
       }
     }
   },
-  "habits": {
-    "Gym": {
-      "frequency": "Custom (times per week)",
-      "target": 3,
-      "completions": {},
-      "notes": "📅 Day 1 — Heavy Power (Lower + Push + Pull)\nWarm-up: Bike 5 min → Hip openers → Glute bridges 2×15\nExercise\nSets × Reps\nNotes\nBack Squat\n5 × 5\nHeavy, add +2.5 kg weekly if fast\nWeighted Chin-ups (neutral or supinated)\n3 × 4–6\nAdd weight or reps weekly\nWeighted Dips\n3 × 5–7\nChest-forward lean\nDB Incline Press\n3 × 8–10\n\n\nIso-Row (wide grip)\n3 × 8–10\nChest-supported\nLeg Curl (lying or seated)\n3 × 10–12\nAdded for hamstring frequency\nBand Pull-Apart\n2 × 15–20\n\n\nWeighted Sit-ups or Cable Crunch\n3 × 12–15\n\n\nPlank Shoulder Taps\n3 × 20–25/side\n\n\nIncline Treadmill Walk\n10–12 min\nIncline 5–7, speed 5–5.5 km/h, HR 130–140\n\n→ Leg press removed to keep Day 1 survivable and recovery high\n📅 Day 2 — Strength Focus (Posterior Chain + Press)\nWarm-up: Treadmill 5 min → Shoulder mobility + cat-cow\nExercise\nSets × Reps\nNotes\nRomanian Deadlift (barbell)\n4 × 6–8\nConventional or sumo stance\nSmith Bench Press\n4 × 6–8\nClose grip or normal\nFarmer Walks\n4 × 30–40 m\nHeavy, trap bar or DBs\nSmith or Barbell Row\n4 × 7–9\n\n\nShoulder Press Machine\n3 × 8–12\n\n\nIso-Row (close grip)\n3 × 10–12\n\n\nFace Pulls\n3 × 15–20\n\n\nHanging Leg Raise\n3 × 12–15\nSlow eccentric\nPlank (regular)\n3 × 70–90 sec\n\n\nEMOM Run\n10 rounds\n40 s run @ 10–11 km/h / 20 s walk @ 5–6 km/h, incline 1–2\n\n📅 Day 3 — Explosive + Hypertrophy Volume\nWarm-up: Bike 5 min → Ankle + hip mobility\nExercise\nSets × Reps\nNotes\nSpeed Squat (50–65% 1RM)\n6 × 3\nExplosive, 90 s rest\nHack Squat or Leg Press\n3 × 10–12\nDeep, controlled\nWeighted Pull-ups\n4 × 6–8\nLighter than Day 1\nChest Press Machine\n3 × 10–12\n\n\nDips (bodyweight or weighted)\n3 × 8–12\n\n\nCable Lateral Raise\n3 × 12–15\n\n\nTriceps Pushdown\n3 × 12–15\n\n\nLow Row (close grip)\n3 × 8–12\n\n\nUpright Row (wide, to chest)\n3 × 10–12\n\n\nRear Delt Fly + Shrugs superset\n3 × 12–15 each\n\n\nCable Crunch\n3 × 15\n\n\nAb Wheel Rollout\n3 × 8–12\n\n\nSide Plank\n3 × 45–60 s/side\n\n\nTreadmill Intervals\n5 × 200 m\n45 s @ 12–13.5 km/h / 45 s walk, incline 0–1\n\n📅 Day 4 — Power + Active Recovery\nWarm-up: Bike 5 min → Hamstring + thoracic mobility\nExercise\nSets × Reps\nNotes\nTrap Bar Deadlift\n4 × 5\nExplosive, +2.5–5 kg weekly\nSmith Overhead Press/ Incline Press\n3 × 6–8\n\n\nPec Deck or Cable Fly\n3 × 12–15\n\n\nWide-Grip Cable Row\n3 × 8–12\n\n\nSeated Leg Curl\n3 × 12–15\n\n\nHammer Curl\n3 × 10–12\n\n\nFace Pulls\n3 × 15–20\n\n\nHanging Knee Raise\n3 × 12–15\n\n\nSide Plank Walk or Stir-the-Pot\n3 × 40–50 s\n\n\nSprint Conditioning\n6 × 100 m\n15 s all-out @ 13.5–15 km/h / 45 s walk, incline 0–1\nMobility Flow + Light Bands\n10–12 min\nFace pulls, curls, kickbacks, dislocates\n\n",
-      "created": "2026-02-09"
-    },
-    "Book Reaing": {
-      "frequency": "Daily",
-      "target": 1,
-      "completions": {},
-      "notes": "Any books",
-      "created": "2026-02-09"
-    }
-  }
+  "habits": {}
 }
