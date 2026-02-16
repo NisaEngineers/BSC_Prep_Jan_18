@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nisa Engineers — AI & Engineering Excellence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080f;
+      --surface: #0f0f1a;
+      --surface2: #13131f;
+      --surface3: #18182a;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-dim: rgba(201,168,76,0.12);
+      --gold-glow: rgba(201,168,76,0.06);
+      --text: #e8e4d8;
+      --text-dim: #8a8478;
+      --text-muted: #4a4640;
+      --accent: #4a7fff;
+      --border: rgba(201,168,76,0.12);
+      --border-bright: rgba(201,168,76,0.35);
+      --green: #3ecf8e;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    .cursor { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; position: fixed; top:0; left:0; pointer-events:none; z-index:9999; mix-blend-mode: difference; }
+    .cursor-ring { width: 36px; height: 36px; border: 1px solid rgba(201,168,76,0.5); border-radius: 50%; position: fixed; top:0; left:0; pointer-events:none; z-index:9998; transition: width 0.2s, height 0.2s, border-color 0.2s; }
+    .cursor-ring.hovering { width: 52px; height: 52px; border-color: var(--gold); }
+
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events:none; z-index:1000; opacity:0.6; }
+
+    nav { position:fixed; top:0; left:0; right:0; z-index:500; padding:1.5rem 8vw; display:flex; justify-content:space-between; align-items:center; transition: background 0.3s, padding 0.3s; }
+    nav.scrolled { background:rgba(8,8,15,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:1rem 8vw; }
+    .nav-logo { font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--text); text-decoration:none; }
+    .nav-logo span { color:var(--gold); }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim); text-decoration:none; transition:color 0.2s; position:relative; }
+    .nav-links a::after { content:''; position:absolute; left:0; bottom:-3px; width:0; height:1px; background:var(--gold); transition:width 0.2s; }
+    .nav-links a:hover { color:var(--gold); }
+    .nav-links a:hover::after { width:100%; }
+
+    header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:0 8vw; position:relative; overflow:hidden; }
+    header::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201,168,76,0.06) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(74,127,255,0.05) 0%, transparent 60%); }
+    .hero-eyebrow { font-size:0.7rem; letter-spacing:0.25em; color:var(--gold); text-transform:uppercase; margin-bottom:2rem; display:flex; align-items:center; gap:1rem; animation:fadeUp 0.8s ease both; }
+    .hero-eyebrow::before { content:''; display:inline-block; width:40px; height:1px; background:var(--gold); }
+    .hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(4rem,10vw,9rem); font-weight:300; line-height:0.95; letter-spacing:-0.02em; margin-bottom:2rem; animation:fadeUp 0.8s 0.15s ease both; }
+    .hero-title em { font-style:italic; color:var(--gold); }
+    .hero-sub { font-size:clamp(0.8rem,1.2vw,1rem); color:var(--text-dim); max-width:520px; line-height:1.8; margin-bottom:3.5rem; animation:fadeUp 0.8s 0.3s ease both; }
+    .hero-cta { display:flex; gap:1.5rem; align-items:center; animation:fadeUp 0.8s 0.45s ease both; }
+    .btn-primary { display:inline-block; padding:1rem 2.5rem; background:var(--gold); color:#08080f; font-family:'Syne',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; text-decoration:none; transition:all 0.25s; position:relative; overflow:hidden; }
+    .btn-primary::after { content:''; position:absolute; inset:0; background:#fff; transform:scaleX(0); transform-origin:left; transition:transform 0.25s ease; }
+    .btn-primary:hover::after { transform:scaleX(1); }
+    .btn-primary span { position:relative; z-index:1; }
+    .btn-ghost { font-size:0.75rem; letter-spacing:0.1em; color:var(--text-dim); text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s; }
+    .btn-ghost:hover { color:var(--gold); }
+    .btn-ghost::after { content:'↓'; }
+    .hero-stats { position:absolute; right:8vw; bottom:12vh; display:flex; flex-direction:column; gap:1rem; animation:fadeLeft 0.8s 0.6s ease both; }
+    .stat-item { text-align:right; }
+    .stat-num { font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; line-height:1; color:var(--gold); }
+    .stat-label { font-size:0.65rem; letter-spacing:0.2em; color:var(--text-muted); text-transform:uppercase; }
+    .scroll-indicator { position:absolute; bottom:3rem; left:8vw; display:flex; align-items:center; gap:1rem; font-size:0.65rem; letter-spacing:0.2em; color:var(--text-muted); text-transform:uppercase; animation:fadeUp 1s 0.9s ease both; }
+    .scroll-line { width:60px; height:1px; background:var(--text-muted); position:relative; overflow:hidden; }
+    .scroll-line::after { content:''; position:absolute; inset:0; background:var(--gold); animation:scrollAnim 1.8s ease-in-out infinite; }
+
+    section { padding:7rem 8vw; }
+    .section-label { font-size:0.65rem; letter-spacing:0.3em; color:var(--gold); text-transform:uppercase; margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem; }
+    .section-label::after { content:''; flex:0 0 40px; height:1px; background:var(--gold); }
+    .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.5rem,5vw,4.5rem); font-weight:300; line-height:1.1; margin-bottom:1.5rem; }
+    .section-title em { font-style:italic; color:var(--gold); }
+
+    #about { display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; border-top:1px solid var(--border); }
+    .about-body { font-size:0.85rem; line-height:2; color:var(--text-dim); }
+    .about-body p + p { margin-top:1.2rem; }
+    .about-body strong { color:var(--text); }
+    .expertise-list { margin-top:3rem; display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; list-style:none; }
+    .expertise-list li { font-size:0.7rem; letter-spacing:0.1em; color:var(--text-dim); padding:0.6rem 1rem; border:1px solid var(--border); transition:all 0.2s; }
+    .expertise-list li:hover { border-color:var(--gold); color:var(--gold); background:var(--gold-dim); }
+    .expertise-list li::before { content:'▸ '; color:var(--gold); }
+    .about-quote { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-style:italic; line-height:1.6; color:var(--text); border-left:2px solid var(--gold); padding-left:1.5rem; margin-bottom:2rem; }
+
+    #engineer { border-top:1px solid var(--border); }
+    .engineer-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:5rem; align-items:start; margin-top:4rem; }
+    .engineer-card { position:sticky; top:100px; background:var(--surface); border:1px solid var(--border-bright); padding:2.5rem; }
+    .engineer-avatar { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg, var(--gold-dim), var(--surface3)); border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:var(--gold); margin-bottom:1.5rem; }
+    .engineer-name { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:800; letter-spacing:0.04em; color:var(--text); margin-bottom:0.3rem; }
+    .engineer-role { font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; }
+    .engineer-stats { display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1.5rem; }
+    .eng-stat { display:flex; justify-content:space-between; align-items:center; }
+    .eng-stat-label { font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); }
+    .eng-stat-val { font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold-light); }
+    .eng-stat-val.green { color:var(--green); font-family:'DM Mono',monospace; font-size:0.85rem; }
+    .platform-badge { margin-top:1rem; display:flex; align-items:center; gap:0.75rem; padding:0.65rem 1rem; font-size:0.7rem; letter-spacing:0.08em; text-decoration:none; border:1px solid; transition:all 0.2s; }
+    .platform-badge.upwork { color:var(--green); border-color:rgba(62,207,142,0.3); background:rgba(62,207,142,0.07); }
+    .platform-badge.upwork:hover { background:rgba(62,207,142,0.15); }
+    .platform-badge.freelancer { color:#7ab3ff; border-color:rgba(122,179,255,0.3); background:rgba(122,179,255,0.07); }
+    .platform-badge.freelancer:hover { background:rgba(122,179,255,0.15); }
+
+    .engineer-right {}
+    .bio-block { margin-bottom:2.5rem; }
+    .bio-block-label { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
+    .research-card { background:var(--surface2); border:1px solid var(--border); padding:1.5rem; margin-bottom:1rem; transition:all 0.25s; position:relative; }
+    .research-card:hover { border-color:var(--gold); background:var(--surface3); }
+    .research-card a { text-decoration:none; display:block; }
+    .research-tag { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+    .research-title { font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--text); line-height:1.4; margin-bottom:0.5rem; }
+    .research-meta { font-size:0.68rem; color:var(--text-muted); }
+    .research-arrow { position:absolute; right:1.5rem; top:50%; transform:translateY(-50%); color:var(--gold); opacity:0; transition:opacity 0.2s; }
+    .research-card:hover .research-arrow { opacity:1; }
+    .skills-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--border); margin-top:0.5rem; }
+    .skill-chip { background:var(--bg); padding:0.6rem 0.8rem; font-size:0.7rem; letter-spacing:0.08em; color:var(--text-dim); transition:all 0.15s; }
+    .skill-chip:hover { background:var(--gold-dim); color:var(--gold); }
+    .timeline { position:relative; padding-left:1.5rem; }
+    .timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:1px; background:var(--border); }
+    .timeline-item { position:relative; padding:0 0 2rem 1.5rem; }
+    .timeline-item::before { content:''; position:absolute; left:-4px; top:6px; width:9px; height:9px; border-radius:50%; background:var(--bg); border:2px solid var(--gold); }
+    .timeline-year { font-size:0.65rem; letter-spacing:0.2em; color:var(--gold); text-transform:uppercase; margin-bottom:0.3rem; }
+    .timeline-event { font-size:0.82rem; color:var(--text); font-weight:600; margin-bottom:0.25rem; }
+    .timeline-detail { font-size:0.75rem; color:var(--text-dim); line-height:1.6; }
+
+    #services { border-top:1px solid var(--border); }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:0; margin-top:4rem; border:1px solid var(--border); }
+    .service-item { padding:2.5rem; border-right:1px solid var(--border); border-bottom:1px solid var(--border); position:relative; transition:background 0.3s; overflow:hidden; }
+    .service-item:hover { background:var(--surface2); }
+    .service-item::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,var(--gold-dim) 0%,transparent 60%); opacity:0; transition:opacity 0.3s; }
+    .service-item:hover::before { opacity:1; }
+    .service-num { font-family:'Cormorant Garamond',serif; font-size:3.5rem; font-weight:300; color:var(--text-muted); line-height:1; margin-bottom:1rem; }
+    .service-title { font-family:'Syne',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.05em; margin-bottom:0.75rem; color:var(--text); }
+    .service-desc { font-size:0.75rem; color:var(--text-dim); line-height:1.8; }
+
+    #works { border-top:1px solid var(--border); }
+    .works-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:4rem; }
+    .category-group { margin-bottom:4rem; }
+    .cat-label { font-size:0.65rem; letter-spacing:0.25em; color:var(--gold); text-transform:uppercase; margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border); }
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1px; background:var(--border); }
+    .project-card { background:var(--bg); padding:1.75rem 2rem; cursor:default; transition:background 0.2s; position:relative; overflow:hidden; }
+    .project-card::after { content:'→'; position:absolute; right:1.5rem; top:50%; transform:translateY(-50%) translateX(10px); color:var(--gold); font-size:1rem; opacity:0; transition:all 0.2s; }
+    .project-card:hover { background:var(--surface2); }
+    .project-card:hover::after { opacity:1; transform:translateY(-50%) translateX(0); }
+    .project-name { font-family:'Syne',sans-serif; font-size:0.8rem; font-weight:600; color:var(--text); transition:color 0.2s; }
+    .project-card:hover .project-name { color:var(--gold-light); }
+
+    #reviews { border-top:1px solid var(--border); background:var(--surface); position:relative; }
+    #reviews::before { content:'"'; font-family:'Cormorant Garamond',serif; font-size:30rem; font-weight:300; color:rgba(201,168,76,0.03); position:absolute; top:-4rem; left:4vw; line-height:1; pointer-events:none; }
+    .reviews-intro { font-size:0.8rem; color:var(--text-dim); max-width:500px; line-height:1.8; margin-bottom:4rem; }
+    .reviews-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.5rem; }
+    .review-card { border:1px solid var(--border); padding:2rem; position:relative; transition:all 0.3s; background:var(--bg); }
+    .review-card:hover { border-color:var(--gold); transform:translateY(-4px); box-shadow:0 20px 60px rgba(201,168,76,0.08); }
+    .review-stars { color:var(--gold); font-size:0.75rem; letter-spacing:0.15em; margin-bottom:0.75rem; }
+    .review-source { font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.5rem; }
+    .review-source.fl { color:#7ab3ff; }
+    .review-text { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--text); line-height:1.6; margin-bottom:0.75rem; }
+    .review-date { font-size:0.65rem; letter-spacing:0.15em; color:var(--text-muted); text-transform:uppercase; }
+    .review-client { font-size:0.65rem; color:var(--text-muted); margin-bottom:0.25rem; }
+
+    #contact { border-top:1px solid var(--border); display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center; }
+    .contact-cta-text { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,3rem); font-weight:300; line-height:1.3; margin-bottom:2rem; }
+    .contact-cta-text em { font-style:italic; color:var(--gold); }
+    .contact-body { font-size:0.8rem; color:var(--text-dim); line-height:1.9; margin-bottom:2.5rem; }
+    .contact-info { display:flex; flex-direction:column; gap:1.5rem; }
+    .contact-row { display:flex; align-items:center; padding:1.25rem 1.5rem; border:1px solid var(--border); gap:1.5rem; transition:all 0.2s; }
+    .contact-row:hover { border-color:var(--gold); background:var(--gold-dim); }
+    .contact-icon { font-size:1.2rem; color:var(--gold); flex-shrink:0; }
+    .contact-detail-label { font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.25rem; }
+    .contact-detail-value { font-size:0.85rem; color:var(--text); }
+    .contact-form { display:flex; flex-direction:column; gap:1rem; }
+    .form-group { display:flex; flex-direction:column; gap:0.4rem; }
+    .form-label { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-muted); }
+    .form-input, .form-textarea { background:var(--surface2); border:1px solid var(--border); color:var(--text); padding:0.85rem 1rem; font-family:'DM Mono',monospace; font-size:0.8rem; outline:none; transition:border-color 0.2s; resize:none; }
+    .form-input:focus, .form-textarea:focus { border-color:var(--gold); }
+    .form-submit { margin-top:0.5rem; padding:1rem 2.5rem; background:var(--gold); color:#08080f; font-family:'Syne',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; border:none; cursor:pointer; transition:all 0.25s; align-self:flex-start; }
+    .form-submit:hover { background:var(--gold-light); }
+
+    footer { border-top:1px solid var(--border); padding:2rem 8vw; display:flex; justify-content:space-between; align-items:center; }
+    .footer-brand { font-family:'Syne',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); }
+    .footer-brand span { color:var(--gold); }
+    .footer-links { display:flex; gap:2rem; }
+    .footer-links a { font-size:0.65rem; letter-spacing:0.1em; color:var(--text-muted); text-decoration:none; text-transform:uppercase; transition:color 0.2s; }
+    .footer-links a:hover { color:var(--gold); }
+    .footer-copy { font-size:0.65rem; color:var(--text-muted); letter-spacing:0.1em; }
+
+    .divider { width:100%; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0; }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeLeft { from{opacity:0;transform:translateX(24px)} to{opacity:1;transform:translateX(0)} }
+    @keyframes scrollAnim { 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
+    .reveal { opacity:0; transform:translateY(32px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    @media(max-width:768px){
+      #about,#contact,#engineer .engineer-grid{grid-template-columns:1fr;gap:3rem}
+      .hero-stats{display:none}
+      .nav-links{display:none}
+      .engineer-card{position:static}
+      .skills-grid{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<nav id="main-nav">
+  <a href="#" class="nav-logo">Nisa <span>Engineers</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#engineer">Team</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <div class="hero-eyebrow">Dhaka, Bangladesh — Est. 2021</div>
+  <h1 class="hero-title">Where Intelligence<br>Meets <em>Engineering</em></h1>
+  <p class="hero-sub">We build AI systems that don't just compute — they understand. From precision computer vision to conversational AI that feels human, Nisa Engineers turns ambitious ideas into deployable reality.</p>
+  <div class="hero-cta">
+    <a href="#works" class="btn-primary"><span>Explore Our Work</span></a>
+    <a href="#contact" class="btn-ghost">Start a Project</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Years in Practice</div></div>
+    <div class="stat-item"><div class="stat-num">58+</div><div class="stat-label">Projects Delivered</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">5-Star Reviews</div></div>
+    <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Active Platforms</div></div>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-line"></div>Scroll to explore</div>
+</header>
+
+<section id="about">
+  <div class="about-left reveal">
+    <div class="section-label">Who We Are</div>
+    <h2 class="section-title">Engineering the <em>Intelligent</em> Future</h2>
+    <ul class="expertise-list">
+      <li>Artificial Intelligence</li><li>Machine Learning</li>
+      <li>Computer Vision</li><li>NLP & Chatbots</li>
+      <li>Embedded Systems</li><li>Data Science</li>
+      <li>IoT Solutions</li><li>System Architecture</li>
+    </ul>
+  </div>
+  <div class="about-right reveal">
+    <blockquote class="about-quote">"We don't just write code — we engineer intelligence that scales, adapts, and delivers."</blockquote>
+    <div class="about-body">
+      <p>Nisa Engineers is a <strong>premier AI and engineering consultancy</strong> headquartered in Dhaka, Bangladesh. Under the leadership of our Director and Lead Engineer, we've assembled a team of specialists who live at the intersection of research and real-world deployment.</p>
+      <p>Since 2021, we've tackled everything from <strong>custom large language model fine-tuning</strong> to IoT-based agricultural disease detection — solving problems that others call unsolvable. Our clients don't just receive deliverables; they receive working systems that keep working.</p>
+      <p>What sets us apart? We treat every project as a product. We obsess over architecture, sweat the edge cases, and communicate clearly from kickoff to launch. 58+ jobs across Upwork and Freelancer.com — every single engagement ending with five stars.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="engineer">
+  <div class="reveal">
+    <div class="section-label">The Person Behind It</div>
+    <h2 class="section-title">Lead <em>Engineer</em></h2>
+  </div>
+  <div class="engineer-grid">
+    <div class="engineer-card reveal">
+      <div class="engineer-avatar">J</div>
+      <div class="engineer-name">Mohammad Nur Uj Jaman Khan</div>
+      <div class="engineer-role">Director & Lead AI Engineer</div>
+      <div class="about-body" style="font-size:0.78rem;line-height:1.9">
+        Full Stack AI &amp; Machine Learning Engineer with a background in both Computer Science &amp; Engineering and Mechanical Engineering, cross-trained into AI, computer vision, NLP, embedded systems, and web development. Research contributor to Bengali NLP. Open to new projects, responds within 24 hours.
+      </div>
+
+      <div class="engineer-stats">
+        <div class="eng-stat"><span class="eng-stat-label">Upwork Jobs</span><span class="eng-stat-val">56</span></div>
+        <div class="eng-stat"><span class="eng-stat-label">Hours Logged</span><span class="eng-stat-val">461+</span></div>
+        <div class="eng-stat"><span class="eng-stat-label">Job Success</span><span class="eng-stat-val">100%</span></div>
+        <div class="eng-stat"><span class="eng-stat-label">Freelancer Rating</span><span class="eng-stat-val">5.0 ★</span></div>
+        <div class="eng-stat"><span class="eng-stat-label">On Time / On Budget</span><span class="eng-stat-val green">100% / 100%</span></div>
+        <div class="eng-stat"><span class="eng-stat-label">Response Time</span><span class="eng-stat-val green">&lt; 24 hrs</span></div>
+        <div class="eng-stat"><span class="eng-stat-label">Location</span><span class="eng-stat-val green">Dhaka, BD</span></div>
+      </div>
+
+      <a href="https://www.upwork.com/freelancers/mohammadnurujjamank" target="_blank" rel="noopener" class="platform-badge upwork">
+        ✓ Upwork — 100% Job Success &nbsp;↗
+      </a>
+      <a href="https://www.freelancer.com/u/Jaman1310ai" target="_blank" rel="noopener" class="platform-badge freelancer">
+        ↗ Freelancer.com — @Jaman1310ai · 5.0 ★
+      </a>
+    </div>
+
+    <div class="engineer-right reveal">
+      <div class="bio-block">
+        <div class="bio-block-label">Core Technical Stack</div>
+        <div class="skills-grid">
+          <div class="skill-chip">Python</div><div class="skill-chip">C++</div><div class="skill-chip">JavaScript</div>
+          <div class="skill-chip">TensorFlow</div><div class="skill-chip">PyTorch</div><div class="skill-chip">OpenCV</div>
+          <div class="skill-chip">LangChain</div><div class="skill-chip">LangGraph</div><div class="skill-chip">LlamaIndex</div>
+          <div class="skill-chip">LLM Fine-tuning</div><div class="skill-chip">RAG Pipelines</div><div class="skill-chip">Pinecone</div>
+          <div class="skill-chip">OpenAI API</div><div class="skill-chip">Claude API</div><div class="skill-chip">Gemini API</div>
+          <div class="skill-chip">Groq API</div><div class="skill-chip">Django</div><div class="skill-chip">Streamlit</div>
+          <div class="skill-chip">Reinforcement Learning</div><div class="skill-chip">GANs</div><div class="skill-chip">IoT / Embedded</div>
+          <div class="skill-chip">XTTS / TTS</div><div class="skill-chip">Voice Cloning</div><div class="skill-chip">Computer Vision</div>
+          <div class="skill-chip">Backtesting</div><div class="skill-chip">Financial ML</div><div class="skill-chip">Data Science</div>
+        </div>
+      </div>
+
+      <div class="bio-block">
+        <div class="bio-block-label">Published Research</div>
+        <div class="research-card">
+          <a href="https://arxiv.org/abs/2203.06607" target="_blank" rel="noopener">
+            <div class="research-tag">arXiv · 2022 · NLP</div>
+            <div class="research-title">A Systematic Study and Analysis of Bengali Folklore with Natural Language Processing Systems</div>
+            <div class="research-meta">Co-author · Billah, Mynoddin, Akhond, Adnan, Galib, Rahad, <strong style="color:var(--gold)">M. Nurujjaman Khan</strong> · First computational NLP model for Bengali folklore analysis</div>
+            <div class="research-arrow">→</div>
+          </a>
+        </div>
+        <div class="research-card">
+          <div class="research-tag">Thesis · Mechanical Engineering · JUST</div>
+          <div class="research-title">Autonomous Multipurpose Weapon System: A Computational Military Approach</div>
+          <div class="research-meta">Lead Researcher · Jashore University of Science and Technology · Embedded AI systems for autonomous control</div>
+        </div>
+        <div class="research-card">
+          <a href="https://www.credly.com/badges/41530408-158c-47c2-aace-6b58bd8ed06f/public_url" target="_blank" rel="noopener">
+            <div class="research-tag">Certification · IBM · Credly Verified · 2023</div>
+            <div class="research-title">IBM Machine Learning Professional Certificate</div>
+            <div class="research-meta">Issued by IBM — verified on Credly</div>
+            <div class="research-arrow">→</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="bio-block">
+        <div class="bio-block-label">Journey</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2016 – 2021</div>
+            <div class="timeline-event">B.Sc. CSE — Jashore University of Science & Technology</div>
+            <div class="timeline-detail">Graduated in Computer Science & Engineering. Thesis on Autonomous Multipurpose Weapon Systems using embedded AI.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2019 – 2023</div>
+            <div class="timeline-event">Graduation in Engineering (Mechanical) — BUET</div>
+            <div class="timeline-detail">Bangladesh University of Engineering & Technology. Associate degree, Institute of Engineers Bangladesh.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-event">Founded Nisa Engineers · Joined Fiverr & Upwork</div>
+            <div class="timeline-detail">Started as a solo AI consultancy out of Dhaka. Level One Fiverr Seller with all 5-star reviews from day one.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2022</div>
+            <div class="timeline-event">Published arXiv Research Paper</div>
+            <div class="timeline-detail">Co-authored the first computational NLP study on Bengali folklore — pioneering work for a low-resource language.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-event">Joined Freelancer.com · IBM ML Certificate</div>
+            <div class="timeline-detail">Expanded to LLMs, RAG, and multilingual TTS. Joined Freelancer.com as @Jaman1310ai — 5.0 rating, 100% on time & on budget. IBM Machine Learning Certificate earned.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-event">Kadalu AI — Browser Music Editor</div>
+            <div class="timeline-detail">Delivered a full browser-based AI music editor. Expanded into voice cloning, text-to-video, and financial ML (ETF swing trading, OANDA bot).</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2026 →</div>
+            <div class="timeline-event">58+ Jobs · 100% Success · 2 Platforms</div>
+            <div class="timeline-detail">Active on Upwork and Freelancer.com. Open to new projects globally. Responds within 24 hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="services">
+  <div class="reveal">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Seven Pillars of <em>Expertise</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-item reveal"><div class="service-num">01</div><div class="service-title">AI & Machine Learning</div><div class="service-desc">Custom models for prediction, classification, and automation. From FinGPT fine-tuning to recommendation engines, we build ML systems that learn from your data and deliver measurable outcomes.</div></div>
+    <div class="service-item reveal"><div class="service-num">02</div><div class="service-title">Computer Vision</div><div class="service-desc">Object detection, image generation, facial recognition, and aerial analysis for agriculture, healthcare, and robotics. We make machines see — and understand what they see.</div></div>
+    <div class="service-item reveal"><div class="service-num">03</div><div class="service-title">NLP & Conversational AI</div><div class="service-desc">Chatbots that hold real conversations, multilingual transcription engines, sentiment pipelines, and LLM-powered knowledge bases. We build language AI that communicates like a human expert.</div></div>
+    <div class="service-item reveal"><div class="service-num">04</div><div class="service-title">Embedded Systems & IoT</div><div class="service-desc">Real-time hardware integrations, crop disease detection devices, and eye-controlled interfaces. We bridge the gap between smart software and the physical world — reliably and at scale.</div></div>
+    <div class="service-item reveal"><div class="service-num">05</div><div class="service-title">Web & App Development</div><div class="service-desc">Production-grade UIs for AI-powered products. Whether it's a browser-based music editor, a fitness tracker, or a custom Django dashboard, our interfaces are built to perform and delight.</div></div>
+    <div class="service-item reveal"><div class="service-num">06</div><div class="service-title">Consulting & Optimization</div><div class="service-desc">Stuck on a model that won't converge? An architecture that won't scale? We diagnose and fix complex technical problems — LangChain pipelines, reinforcement learning bugs, hash function design, and more.</div></div>
+    <div class="service-item reveal"><div class="service-num">07</div><div class="service-title">Data Science & Analytics</div><div class="service-desc">GAN-based data generation, financial modeling, reinforcement learning, and robust ETL pipelines. We transform raw data into intelligence that drives decisions and competitive advantage.</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="works">
+  <div class="works-header reveal">
+    <div>
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Prominent <em>Works</em></h2>
+    </div>
+  </div>
+  <div class="category-group reveal">
+    <div class="cat-label">AI & Machine Learning Development</div>
+    <div class="projects-grid">
+      <div class="project-card"><div class="project-name">Kadalu AI — Browser-Based Music Editor</div></div>
+      <div class="project-card"><div class="project-name">Near Human-Like Conversational ChatBot</div></div>
+      <div class="project-card"><div class="project-name">Farmers Advisory Chatbot with RAG</div></div>
+      <div class="project-card"><div class="project-name">AI Model Training for FinGPT</div></div>
+      <div class="project-card"><div class="project-name">Active Learning Pipeline</div></div>
+      <div class="project-card"><div class="project-name">GPT + WolframAlpha via LangChain</div></div>
+      <div class="project-card"><div class="project-name">ETF Swing Trading App (Python · Streamlit)</div></div>
+      <div class="project-card"><div class="project-name">Machine & Federated Learning System</div></div>
+    </div>
+  </div>
+  <div class="category-group reveal">
+    <div class="cat-label">Computer Vision & Image Processing</div>
+    <div class="projects-grid">
+      <div class="project-card"><div class="project-name">Rice Classification & Grain Counter</div></div>
+      <div class="project-card"><div class="project-name">Pumpkin Flower Detection System</div></div>
+      <div class="project-card"><div class="project-name">Potato & Tomato Disease Detection (IoT)</div></div>
+      <div class="project-card"><div class="project-name">Eye-Controlled Wheelchair Interface</div></div>
+      <div class="project-card"><div class="project-name">StyleGAN & Pix2Pix GAN Development</div></div>
+      <div class="project-card"><div class="project-name">Face Recognition Codebase</div></div>
+    </div>
+  </div>
+  <div class="category-group reveal">
+    <div class="cat-label">Natural Language Processing & Chatbots</div>
+    <div class="projects-grid">
+      <div class="project-card"><div class="project-name">Custom Multilingual Text-to-Speech Engine</div></div>
+      <div class="project-card"><div class="project-name">Computational Analysis of Bengali Folklore</div></div>
+      <div class="project-card"><div class="project-name">LLM Chatbot for Monaarch Platform</div></div>
+      <div class="project-card"><div class="project-name">LangChain Integration with LLaMA2</div></div>
+      <div class="project-card"><div class="project-name">Books-to-ChatBot Conversion Pipeline</div></div>
+    </div>
+  </div>
+  <div class="category-group reveal">
+    <div class="cat-label">Consulting, Optimization & Other</div>
+    <div class="projects-grid">
+      <div class="project-card"><div class="project-name">Scalable System Architecture Consultation</div></div>
+      <div class="project-card"><div class="project-name">Debugging Reinforcement Learning Model</div></div>
+      <div class="project-card"><div class="project-name">Perfect Hash Function Design</div></div>
+      <div class="project-card"><div class="project-name">Autoencoder Implementation</div></div>
+      <div class="project-card"><div class="project-name">OANDA Algorithmic Trading Bot</div></div>
+      <div class="project-card"><div class="project-name">GAN Model Training Assistance</div></div>
+      <div class="project-card"><div class="project-name">Personal Trainer & Symptoms Checker App</div></div>
+      <div class="project-card"><div class="project-name">AI-Powered Search Bar Design</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="reviews">
+  <div class="reveal">
+    <div class="section-label">Testimonials</div>
+    <h2 class="section-title">Words from <em>Clients</em></h2>
+    <p class="reviews-intro">Over four years and across five continents, every engagement has ended with five stars — on Upwork and Freelancer.com combined.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"An exceptional engineer with a remarkable personality, as always."</div><div class="review-date">October 2025</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"Highly skilled and consistently reliable — exactly what you want in a technical partner."</div><div class="review-date">September 2025</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"Your knowledge of embedded systems, AI, and C++ really shines. Delivered flawlessly."</div><div class="review-date">September 2024</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"Proficient in computer vision and research. Fast delivery without sacrificing quality."</div><div class="review-date">June 2024</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"Highly dependable and reliable. Top-notch communication throughout the entire project."</div><div class="review-date">August 2023</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"A brilliant data scientist who solved what I thought was an unsolvable problem."</div><div class="review-date">September 2022</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"Exceptional programmer with good interpersonal skills. Understood all requirements with minimal explanation."</div><div class="review-date">May 2023</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"Completed the job well before the deadline. Professional, on time, and excellent quality."</div><div class="review-date">December 2022</div></div>
+    <div class="review-card reveal"><div class="review-stars">★★★★★</div><div class="review-text">"Fantastic coder and ML expert. Work is stellar even on the most complex topics."</div><div class="review-date">June 2022</div></div>
+    <div class="review-card reveal">
+      <div class="review-source fl">Freelancer.com</div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Mohammad was easy to work with throughout the duration of the project. He answered all my questions and provided useful weekly progress reports."</div>
+      <div class="review-client">Craig L. · Australia · ETF Swing Trading App</div>
+      <div class="review-date">2025</div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-source fl">Freelancer.com</div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Such a great experience — delivered before time and exactly what I wanted. Highly professional, very responsive and on time with quality work. Would definitely choose to work with him again."</div>
+      <div class="review-client">Muhd Baq M. · Singapore · Machine &amp; Federated Learning</div>
+      <div class="review-date">2023</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="contact">
+  <div class="reveal">
+    <div class="section-label">Get In Touch</div>
+    <div class="contact-cta-text">Ready to build something <em>extraordinary</em> together?</div>
+    <p class="contact-body">Whether you have a clear brief or just an ambitious idea, we'd love to hear from you. Reach out and let's talk about what's possible.</p>
+    <div class="contact-info">
+      <div class="contact-row">
+        <div class="contact-icon">✉</div>
+        <div><div class="contact-detail-label">Email</div><div class="contact-detail-value">ai.production2026latest@gmail.com</div></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">◎</div>
+        <div><div class="contact-detail-label">Location</div><div class="contact-detail-value">Dhaka, Bangladesh</div></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">◷</div>
+        <div><div class="contact-detail-label">Availability</div><div class="contact-detail-value">Open to new projects — typically responds within 24 hrs</div></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">↗</div>
+        <div><div class="contact-detail-label">Upwork</div><div class="contact-detail-value"><a href="https://www.upwork.com/freelancers/mohammadnurujjamank" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">View Profile — 56 Jobs · 100% Job Success</a></div></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">↗</div>
+        <div><div class="contact-detail-label">Freelancer.com</div><div class="contact-detail-value"><a href="https://www.freelancer.com/u/Jaman1310ai" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">@Jaman1310ai — 5.0 ★ · 100% On Time · 100% On Budget</a></div></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">⬡</div>
+        <div><div class="contact-detail-label">Research</div><div class="contact-detail-value"><a href="https://arxiv.org/abs/2203.06607" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">arXiv Paper — Bengali Folklore NLP</a></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal">
+    <form class="contact-form" onsubmit="return false;">
+      <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="e.g. Alex Johnson"></div>
+      <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="you@company.com"></div>
+      <div class="form-group"><label class="form-label">Project Type</label><input type="text" class="form-input" placeholder="e.g. Computer Vision, Chatbot, Consulting..."></div>
+      <div class="form-group"><label class="form-label">Tell Us About Your Project</label><textarea class="form-textarea" rows="5" placeholder="Describe your challenge, goals, and any technical context..."></textarea></div>
+      <button type="submit" class="form-submit">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Nisa <span>Engineers</span></div>
+  <div class="footer-links">
+    <a href="https://www.upwork.com/freelancers/mohammadnurujjamank" target="_blank" rel="noopener">Upwork</a>
+    <a href="https://www.freelancer.com/u/Jaman1310ai" target="_blank" rel="noopener">Freelancer</a>
+    <a href="https://arxiv.org/abs/2203.06607" target="_blank" rel="noopener">Research</a>
+    <a href="https://github.com/NisaEngineers" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/jamankhan1310/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="footer-copy">© 2026 Nisa Engineers · Dhaka, Bangladesh · All rights reserved</div>
+</footer>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+  });
+  (function animateRing() {
+    ringX += (mouseX - ringX - 18) * 0.12;
+    ringY += (mouseY - ringY - 18) * 0.12;
+    ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
+    requestAnimationFrame(animateRing);
+  })();
+  document.querySelectorAll('a, button, .project-card, .service-item, .review-card, .contact-row, .skill-chip, .research-card, .platform-badge').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+  });
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 80);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
